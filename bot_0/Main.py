@@ -64,6 +64,43 @@ async def pokemon(ctx, nombre_pokemon):
     if nombre_pokemon =="urshifu-single": nombre_pokemon ="urshifu-single-strike"
     if nombre_pokemon =="urshifu-rapid": nombre_pokemon ="urshifu-rapid-strike"
     if nombre_pokemon =="indeedee-f": nombre_pokemon ="indeedee-female"
+    if nombre_pokemon =="aegislash": nombre_pokemon ="aegislash-shield"
+    if nombre_pokemon =="alolan-ninetales": nombre_pokemon ="ninetales-alola"
+    if nombre_pokemon =="alolan-persian": nombre_pokemon ="persian-alola"
+    if nombre_pokemon =="alolan-raichu": nombre_pokemon ="raichu-alola"
+    if nombre_pokemon =="basculegion": nombre_pokemon ="basculegion-male"
+    if nombre_pokemon =="farfetch'd": nombre_pokemon ="farfetchd"
+    if nombre_pokemon =="floette": nombre_pokemon ="floette-eternal"
+    if nombre_pokemon =="galarian-farfetchd": nombre_pokemon ="farfetchd-galar"
+    if nombre_pokemon =="galarian-mr-mime": nombre_pokemon ="mr-mime-galar"
+    if nombre_pokemon =="galarian-slowbro": nombre_pokemon ="slowbro-galar"
+    if nombre_pokemon =="galarian-slowking": nombre_pokemon ="slowking-galar"
+    if nombre_pokemon =="galarian-stunfisk": nombre_pokemon ="stunfisk-galar"
+    if nombre_pokemon =="gourgeist": nombre_pokemon ="gourgeist-average"
+    if nombre_pokemon =="hisuian-arcanine": nombre_pokemon ="arcanine-hisui"
+    if nombre_pokemon =="hisuian-avalugg": nombre_pokemon ="avalugg-hisui"
+    if nombre_pokemon =="hisuian-decidueye": nombre_pokemon ="decidueye-hisui"
+    if nombre_pokemon =="hisuian-goodra": nombre_pokemon ="goodra-hisui"
+    if nombre_pokemon =="hisuian-samurott": nombre_pokemon ="samurott-hisui"
+    if nombre_pokemon =="hisuian-typhlosion": nombre_pokemon ="typhlosion-hisui"
+    if nombre_pokemon =="hisuian-zoroark": nombre_pokemon ="zoroark-hisui"
+    if nombre_pokemon =="indeedee": nombre_pokemon ="indeedee-male"
+    if nombre_pokemon =="indeedee-m": nombre_pokemon ="indeedee-male"
+    if nombre_pokemon =="kommoo": nombre_pokemon ="kommo-o"
+    if nombre_pokemon =="lycanroc": nombre_pokemon ="lycanroc-midday"
+    if nombre_pokemon =="maushold": nombre_pokemon ="maushold-family-of-four"
+    if nombre_pokemon =="maushold-three": nombre_pokemon ="maushold-family-of-three"
+    if nombre_pokemon =="meowstic": nombre_pokemon ="meowstic-male"
+    if nombre_pokemon =="morpeko": nombre_pokemon ="morpeko-full-belly"
+    if nombre_pokemon =="mr.mime": nombre_pokemon ="mr-mime"
+    if nombre_pokemon =="mr.rime": nombre_pokemon ="mr-rime"
+    if nombre_pokemon =="mrmime": nombre_pokemon ="mr-mime"
+    if nombre_pokemon =="mrrime": nombre_pokemon ="mr-rime"
+    if nombre_pokemon =="palafin": nombre_pokemon ="palafin-zero"
+    if nombre_pokemon =="pyroar": nombre_pokemon ="pyroar-male"
+    if nombre_pokemon =="sirfetch'd": nombre_pokemon ="sirfetchd"
+    if nombre_pokemon =="squawkabilly": nombre_pokemon ="squawkabilly-green-plumage"
+    if nombre_pokemon =="toxtricity": nombre_pokemon ="toxtricity-amped"
     ####################################################################
     
     
@@ -121,16 +158,47 @@ async def pokemon(ctx, nombre_pokemon):
     
 @bot.command()
 async def builds(ctx,nombre_pokemon):
-    ################################################################ arreglar pokemons 
-    if nombre_pokemon =="tornadus":nombre_pokemon ="tornadus-incarnate"
-    if nombre_pokemon =="landorus":nombre_pokemon ="landorus-incarnate"
-    if nombre_pokemon =="thundurus":nombre_pokemon ="thundurus-incarnate"
-    if nombre_pokemon =="ogerpon-wellspring": nombre_pokemon ="ogerpon-wellspring-mask"
-    if nombre_pokemon =="ogerpon-hearthflame": nombre_pokemon ="ogerpon-hearthflame-mask"
-    if nombre_pokemon =="ogerpon-cornerstone": nombre_pokemon ="ogerpon-cornerstone-mask"
-    if nombre_pokemon =="urshifu-single": nombre_pokemon ="urshifu-single-strike"
-    if nombre_pokemon =="urshifu-rapid": nombre_pokemon ="urshifu-rapid-strike"
+    ################################################################ arreglar pokemons (formas de Reg M-C)
+    nombre_pokemon = nombre_pokemon.lower()
+    if nombre_pokemon =="aegislash": nombre_pokemon ="aegislash-shield"
+    if nombre_pokemon =="alolan-ninetales": nombre_pokemon ="ninetales-alola"
+    if nombre_pokemon =="alolan-persian": nombre_pokemon ="persian-alola"
+    if nombre_pokemon =="alolan-raichu": nombre_pokemon ="raichu-alola"
+    if nombre_pokemon =="basculegion": nombre_pokemon ="basculegion-male"
+    if nombre_pokemon =="farfetch'd": nombre_pokemon ="farfetchd"
+    if nombre_pokemon =="floette": nombre_pokemon ="floette-eternal"
+    if nombre_pokemon =="galarian-farfetchd": nombre_pokemon ="farfetchd-galar"
+    if nombre_pokemon =="galarian-mr-mime": nombre_pokemon ="mr-mime-galar"
+    if nombre_pokemon =="galarian-slowbro": nombre_pokemon ="slowbro-galar"
+    if nombre_pokemon =="galarian-slowking": nombre_pokemon ="slowking-galar"
+    if nombre_pokemon =="galarian-stunfisk": nombre_pokemon ="stunfisk-galar"
+    if nombre_pokemon =="gourgeist": nombre_pokemon ="gourgeist-average"
+    if nombre_pokemon =="hisuian-arcanine": nombre_pokemon ="arcanine-hisui"
+    if nombre_pokemon =="hisuian-avalugg": nombre_pokemon ="avalugg-hisui"
+    if nombre_pokemon =="hisuian-decidueye": nombre_pokemon ="decidueye-hisui"
+    if nombre_pokemon =="hisuian-goodra": nombre_pokemon ="goodra-hisui"
+    if nombre_pokemon =="hisuian-samurott": nombre_pokemon ="samurott-hisui"
+    if nombre_pokemon =="hisuian-typhlosion": nombre_pokemon ="typhlosion-hisui"
+    if nombre_pokemon =="hisuian-zoroark": nombre_pokemon ="zoroark-hisui"
+    if nombre_pokemon =="indeedee": nombre_pokemon ="indeedee-male"
     if nombre_pokemon =="indeedee-f": nombre_pokemon ="indeedee-female"
+    if nombre_pokemon =="indeedee-m": nombre_pokemon ="indeedee-male"
+    if nombre_pokemon =="kommoo": nombre_pokemon ="kommo-o"
+    if nombre_pokemon =="lycanroc": nombre_pokemon ="lycanroc-midday"
+    if nombre_pokemon =="maushold": nombre_pokemon ="maushold-family-of-four"
+    if nombre_pokemon =="maushold-three": nombre_pokemon ="maushold-family-of-three"
+    if nombre_pokemon =="meowstic": nombre_pokemon ="meowstic-male"
+    if nombre_pokemon =="mimikyu": nombre_pokemon ="mimikyu-disguised"
+    if nombre_pokemon =="morpeko": nombre_pokemon ="morpeko-full-belly"
+    if nombre_pokemon =="mr.mime": nombre_pokemon ="mr-mime"
+    if nombre_pokemon =="mr.rime": nombre_pokemon ="mr-rime"
+    if nombre_pokemon =="mrmime": nombre_pokemon ="mr-mime"
+    if nombre_pokemon =="mrrime": nombre_pokemon ="mr-rime"
+    if nombre_pokemon =="palafin": nombre_pokemon ="palafin-zero"
+    if nombre_pokemon =="pyroar": nombre_pokemon ="pyroar-male"
+    if nombre_pokemon =="sirfetch'd": nombre_pokemon ="sirfetchd"
+    if nombre_pokemon =="squawkabilly": nombre_pokemon ="squawkabilly-green-plumage"
+    if nombre_pokemon =="toxtricity": nombre_pokemon ="toxtricity-amped"
     ################################################################
    
     #############################################api imagenes############       
@@ -163,14 +231,13 @@ async def builds(ctx,nombre_pokemon):
         move4 = build_info["moves"]["move4"]
         ability = build_info["ability"]
         item = build_info["item"]
-        tera = build_info["tera"]
         
         
 
         # texto para las estadísticas
         text_stat = f"**Nature:** {nature}\n**HP:** {HP}\n**AT:** {AT}\n**DEF:** {DEF}\n**SPA:** {SPA}\n**SPD:** {SPD}\n**SPEED:** {SPEED}\n"
         text_move = f"{move1}\n{move2}\n{move3}\n{move4}\n"
-        text_ability_item = f"{ability}\n**Item**\n{item}\n**Tera**\n{tera}" ########## los combino para el espacio
+        text_ability_item = f"{ability}\n**Item**\n{item}" ########## los combino para el espacio
 
         # crear embed 
         embed_builds = discord.Embed(title=build_name, description="")
