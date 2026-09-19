@@ -64,6 +64,8 @@ async def pokemon(ctx, nombre_pokemon):
     if nombre_pokemon =="urshifu-single": nombre_pokemon ="urshifu-single-strike"
     if nombre_pokemon =="urshifu-rapid": nombre_pokemon ="urshifu-rapid-strike"
     if nombre_pokemon =="indeedee-f": nombre_pokemon ="indeedee-female"
+    # --- alias builds-champions (generado; no editar a mano) ---
+    nombre_pokemon = nombre_pokemon.lower()
     if nombre_pokemon =="aegislash": nombre_pokemon ="aegislash-shield"
     if nombre_pokemon =="alolan-ninetales": nombre_pokemon ="ninetales-alola"
     if nombre_pokemon =="alolan-persian": nombre_pokemon ="persian-alola"
@@ -71,8 +73,6 @@ async def pokemon(ctx, nombre_pokemon):
     if nombre_pokemon =="basculegion": nombre_pokemon ="basculegion-male"
     if nombre_pokemon =="farfetch'd": nombre_pokemon ="farfetchd"
     if nombre_pokemon =="floette": nombre_pokemon ="floette-eternal"
-    if nombre_pokemon =="galarian-farfetchd": nombre_pokemon ="farfetchd-galar"
-    if nombre_pokemon =="galarian-mr-mime": nombre_pokemon ="mr-mime-galar"
     if nombre_pokemon =="galarian-slowbro": nombre_pokemon ="slowbro-galar"
     if nombre_pokemon =="galarian-slowking": nombre_pokemon ="slowking-galar"
     if nombre_pokemon =="galarian-stunfisk": nombre_pokemon ="stunfisk-galar"
@@ -81,16 +81,18 @@ async def pokemon(ctx, nombre_pokemon):
     if nombre_pokemon =="hisuian-avalugg": nombre_pokemon ="avalugg-hisui"
     if nombre_pokemon =="hisuian-decidueye": nombre_pokemon ="decidueye-hisui"
     if nombre_pokemon =="hisuian-goodra": nombre_pokemon ="goodra-hisui"
+    if nombre_pokemon =="hisuian-qwilfish": nombre_pokemon ="qwilfish-hisui"
     if nombre_pokemon =="hisuian-samurott": nombre_pokemon ="samurott-hisui"
     if nombre_pokemon =="hisuian-typhlosion": nombre_pokemon ="typhlosion-hisui"
     if nombre_pokemon =="hisuian-zoroark": nombre_pokemon ="zoroark-hisui"
     if nombre_pokemon =="indeedee": nombre_pokemon ="indeedee-male"
+    if nombre_pokemon =="indeedee-f": nombre_pokemon ="indeedee-female"
     if nombre_pokemon =="indeedee-m": nombre_pokemon ="indeedee-male"
     if nombre_pokemon =="kommoo": nombre_pokemon ="kommo-o"
     if nombre_pokemon =="lycanroc": nombre_pokemon ="lycanroc-midday"
     if nombre_pokemon =="maushold": nombre_pokemon ="maushold-family-of-four"
-    if nombre_pokemon =="maushold-three": nombre_pokemon ="maushold-family-of-three"
     if nombre_pokemon =="meowstic": nombre_pokemon ="meowstic-male"
+    if nombre_pokemon =="mimikyu": nombre_pokemon ="mimikyu-disguised"
     if nombre_pokemon =="morpeko": nombre_pokemon ="morpeko-full-belly"
     if nombre_pokemon =="mr.mime": nombre_pokemon ="mr-mime"
     if nombre_pokemon =="mr.rime": nombre_pokemon ="mr-rime"
@@ -101,6 +103,7 @@ async def pokemon(ctx, nombre_pokemon):
     if nombre_pokemon =="sirfetch'd": nombre_pokemon ="sirfetchd"
     if nombre_pokemon =="squawkabilly": nombre_pokemon ="squawkabilly-green-plumage"
     if nombre_pokemon =="toxtricity": nombre_pokemon ="toxtricity-amped"
+    # --- fin alias builds-champions ---
     ####################################################################
     
     
@@ -156,9 +159,94 @@ async def pokemon(ctx, nombre_pokemon):
    
    
     
+################################################################################################## idioma de las builds
+BANDERA_ES = "\U0001F1EA\U0001F1F8"   # 🇪🇸
+BANDERA_EN = "\U0001F1FA\U0001F1F8"   # 🇺🇸
+
+# id del mensaje -> {"pokemon": ..., "build_number": ..., "image": ...}
+# (se guarda en memoria: si el bot se reinicia, los embeds antiguos dejan de reaccionar)
+mensajes_builds = {}
+
+APIS_BUILDS = {
+    "es": "https://luque2004.github.io/discord-bot/bot_0/builds__vgc_api_es.json",
+    "en": "https://luque2004.github.io/discord-bot/bot_0/builds__vgc_api.json",
+}
+
+def cargar_builds(idioma):
+    ########## descarga el json de builds en el idioma pedido ("es" o "en")
+    response_builds = requests.get(APIS_BUILDS[idioma])
+    return response_builds.json()
+
+
+def crear_embed_build(build_info, pokemon_image):
+    ########## construye el embed de una build a partir de su diccionario del json
+    build_name = build_info["build_name"]
+    nature = build_info["nature"]
+    HP = build_info["evs"]["HP"]
+    AT = build_info["evs"]["AT"]
+    DEF = build_info["evs"]["DEF"]
+    SPA = build_info["evs"]["SPA"]
+    SPD = build_info["evs"]["SPD"]
+    SPEED = build_info["evs"]["SPEED"]
+    move1 = build_info["moves"]["move1"]
+    move2 = build_info["moves"]["move2"]
+    move3 = build_info["moves"]["move3"]
+    move4 = build_info["moves"]["move4"]
+    ability = build_info["ability"]
+    item = build_info["item"]
+
+    # texto para las estadísticas
+    text_stat = f"**Nature:** {nature}\n**HP:** {HP}\n**AT:** {AT}\n**DEF:** {DEF}\n**SPA:** {SPA}\n**SPD:** {SPD}\n**SPEED:** {SPEED}\n"
+    text_move = f"{move1}\n{move2}\n{move3}\n{move4}\n"
+    text_ability_item = f"{ability}\n**Item**\n{item}" ########## los combino para el espacio
+
+    # crear embed
+    embed_builds = discord.Embed(title=build_name, description="")
+    embed_builds.add_field(name="**Spread**", value=text_stat, inline=True)
+    embed_builds.add_field(name="",value="",inline=True)
+    embed_builds.add_field(name="**Abiliity**",value= text_ability_item,inline=True)
+    embed_builds.add_field(name="**Move set**", value= text_move,inline=False)
+    embed_builds.set_thumbnail( url=pokemon_image)
+    return embed_builds
+
+
+@bot.event
+async def on_raw_reaction_add(payload):
+    ########## salta cada vez que alguien reacciona a cualquier mensaje
+    if payload.user_id == bot.user.id:
+        return  # ignoramos las reacciones que pone el propio bot
+    if payload.message_id not in mensajes_builds:
+        return  # no es un embed de builds, no hacemos nada
+
+    emoji = str(payload.emoji)
+    if emoji == BANDERA_ES:
+        idioma = "es"
+    elif emoji == BANDERA_EN:
+        idioma = "en"
+    else:
+        return  # cualquier otra reacción se ignora
+
+    info = mensajes_builds[payload.message_id]
+    data = cargar_builds(idioma)
+    build_info = data[info["pokemon"]][0]["builds"][info["build_number"]]
+
+    canal = bot.get_channel(payload.channel_id)
+    mensaje = await canal.fetch_message(payload.message_id)
+    await mensaje.edit(embed=crear_embed_build(build_info, info["image"]))
+
+    # quitamos la reacción del usuario para que pueda volver a cambiar de idioma
+    # (necesita el permiso "Gestionar mensajes"; si no lo tiene, simplemente no la quita)
+    try:
+        usuario = await bot.fetch_user(payload.user_id)
+        await mensaje.remove_reaction(payload.emoji, usuario)
+    except discord.Forbidden:
+        pass
+##################################################################################################
+
+
 @bot.command()
 async def builds(ctx,nombre_pokemon):
-    ################################################################ arreglar pokemons (formas de Reg M-C)
+    # --- alias builds-champions (generado; no editar a mano) ---
     nombre_pokemon = nombre_pokemon.lower()
     if nombre_pokemon =="aegislash": nombre_pokemon ="aegislash-shield"
     if nombre_pokemon =="alolan-ninetales": nombre_pokemon ="ninetales-alola"
@@ -167,8 +255,6 @@ async def builds(ctx,nombre_pokemon):
     if nombre_pokemon =="basculegion": nombre_pokemon ="basculegion-male"
     if nombre_pokemon =="farfetch'd": nombre_pokemon ="farfetchd"
     if nombre_pokemon =="floette": nombre_pokemon ="floette-eternal"
-    if nombre_pokemon =="galarian-farfetchd": nombre_pokemon ="farfetchd-galar"
-    if nombre_pokemon =="galarian-mr-mime": nombre_pokemon ="mr-mime-galar"
     if nombre_pokemon =="galarian-slowbro": nombre_pokemon ="slowbro-galar"
     if nombre_pokemon =="galarian-slowking": nombre_pokemon ="slowking-galar"
     if nombre_pokemon =="galarian-stunfisk": nombre_pokemon ="stunfisk-galar"
@@ -177,6 +263,7 @@ async def builds(ctx,nombre_pokemon):
     if nombre_pokemon =="hisuian-avalugg": nombre_pokemon ="avalugg-hisui"
     if nombre_pokemon =="hisuian-decidueye": nombre_pokemon ="decidueye-hisui"
     if nombre_pokemon =="hisuian-goodra": nombre_pokemon ="goodra-hisui"
+    if nombre_pokemon =="hisuian-qwilfish": nombre_pokemon ="qwilfish-hisui"
     if nombre_pokemon =="hisuian-samurott": nombre_pokemon ="samurott-hisui"
     if nombre_pokemon =="hisuian-typhlosion": nombre_pokemon ="typhlosion-hisui"
     if nombre_pokemon =="hisuian-zoroark": nombre_pokemon ="zoroark-hisui"
@@ -186,7 +273,6 @@ async def builds(ctx,nombre_pokemon):
     if nombre_pokemon =="kommoo": nombre_pokemon ="kommo-o"
     if nombre_pokemon =="lycanroc": nombre_pokemon ="lycanroc-midday"
     if nombre_pokemon =="maushold": nombre_pokemon ="maushold-family-of-four"
-    if nombre_pokemon =="maushold-three": nombre_pokemon ="maushold-family-of-three"
     if nombre_pokemon =="meowstic": nombre_pokemon ="meowstic-male"
     if nombre_pokemon =="mimikyu": nombre_pokemon ="mimikyu-disguised"
     if nombre_pokemon =="morpeko": nombre_pokemon ="morpeko-full-belly"
@@ -199,58 +285,30 @@ async def builds(ctx,nombre_pokemon):
     if nombre_pokemon =="sirfetch'd": nombre_pokemon ="sirfetchd"
     if nombre_pokemon =="squawkabilly": nombre_pokemon ="squawkabilly-green-plumage"
     if nombre_pokemon =="toxtricity": nombre_pokemon ="toxtricity-amped"
-    ################################################################
+    # --- fin alias builds-champions ---
    
-    #############################################api imagenes############       
+    #############################################api imagenes############
     api_vgc = f"https://pokeapi.co/api/v2/pokemon/{nombre_pokemon}"
-    
+
 
     response_pokemon = requests.get(api_vgc)
     data_img= response_pokemon.json()
     pokemon_image= data_img["sprites"]["front_default"]
-  
+
     ############################################################ api
-    api_builds = f"https://luque2004.github.io/pokemon_api/builds__vgc_api.json"
-    response_builds = requests.get(api_builds)
-    data = response_builds.json()
+    data = cargar_builds("es")   # por defecto se muestran en español
     ###########################################################
     pokemon_builds =data.get(nombre_pokemon, [])
  # bucle para hacer distintos embeds
     for build_number, build_info in pokemon_builds[0].get("builds", {}).items():
-        build_name = build_info["build_name"]
-        nature = build_info["nature"]
-        HP = build_info["evs"]["HP"]
-        AT = build_info["evs"]["AT"]
-        DEF = build_info["evs"]["DEF"]
-        SPA = build_info["evs"]["SPA"]
-        SPD = build_info["evs"]["SPD"]
-        SPEED = build_info["evs"]["SPEED"]
-        move1 = build_info["moves"]["move1"]
-        move2 = build_info["moves"]["move2"]
-        move3 = build_info["moves"]["move3"]
-        move4 = build_info["moves"]["move4"]
-        ability = build_info["ability"]
-        item = build_info["item"]
-        
-        
+        embed_builds = crear_embed_build(build_info, pokemon_image)
+        mensaje = await ctx.send(embed=embed_builds)
 
-        # texto para las estadísticas
-        text_stat = f"**Nature:** {nature}\n**HP:** {HP}\n**AT:** {AT}\n**DEF:** {DEF}\n**SPA:** {SPA}\n**SPD:** {SPD}\n**SPEED:** {SPEED}\n"
-        text_move = f"{move1}\n{move2}\n{move3}\n{move4}\n"
-        text_ability_item = f"{ability}\n**Item**\n{item}" ########## los combino para el espacio
-
-        # crear embed 
-        embed_builds = discord.Embed(title=build_name, description="")
-        embed_builds.add_field(name="**Spread**", value=text_stat, inline=True)
-        embed_builds.add_field(name="",value="",inline=True)
-        embed_builds.add_field(name="**Abiliity**",value= text_ability_item,inline=True)        
-        embed_builds.add_field(name="**Move set**", value= text_move,inline=False)
-        
-       
-        embed_builds.set_thumbnail( url=pokemon_image)
-        
-        
-        await ctx.send(embed=embed_builds)
+        ########## reacciones para cambiar de idioma ##########
+        await mensaje.add_reaction(BANDERA_ES)
+        await mensaje.add_reaction(BANDERA_EN)
+        # guardamos qué build es este mensaje para poder reconstruirlo en otro idioma
+        mensajes_builds[mensaje.id] = {"pokemon": nombre_pokemon, "build_number": build_number, "image": pokemon_image}
         
 
     

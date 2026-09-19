@@ -1341,6 +1341,53 @@
       }
     }
   ],
+  "gengar": [
+    {
+      "pokemon_name": "Gengar",
+      "builds": {
+        "1": {
+          "build_name": "Mega Ofensiva",
+          "item": "Gengarita",
+          "nature": "Miedosa",
+          "ability": "Cuerpo Maldito (Mega: Sombra Trampa)",
+          "moves": {
+            "move1": "Bola Sombra",
+            "move2": "Canto Mortal",
+            "move3": "Bomba Lodo / Anulación",
+            "move4": "Protección"
+          },
+          "evs": {
+            "HP": "0",
+            "AT": "0",
+            "DEF": "0",
+            "SPA": "32",
+            "SPD": "2",
+            "SPEED": "32"
+          }
+        },
+        "2": {
+          "build_name": "Mega Defensiva",
+          "item": "Gengarita",
+          "nature": "Modesta",
+          "ability": "Cuerpo Maldito (Mega: Sombra Trampa)",
+          "moves": {
+            "move1": "Bola Sombra",
+            "move2": "Canto Mortal",
+            "move3": "Bomba Lodo / Anulación",
+            "move4": "Protección"
+          },
+          "evs": {
+            "HP": "24",
+            "AT": "0",
+            "DEF": "18",
+            "SPA": "0",
+            "SPD": "14",
+            "SPEED": "10"
+          }
+        }
+      }
+    }
+  ],
   "ninetales-alola": [
     {
       "pokemon_name": "Ninetales de Alola",
@@ -1403,53 +1450,6 @@
             "SPA": "32",
             "SPD": "0",
             "SPEED": "32"
-          }
-        }
-      }
-    }
-  ],
-  "gengar": [
-    {
-      "pokemon_name": "Gengar",
-      "builds": {
-        "1": {
-          "build_name": "Mega Ofensiva",
-          "item": "Gengarita",
-          "nature": "Miedosa",
-          "ability": "Cuerpo Maldito (Mega: Sombra Trampa)",
-          "moves": {
-            "move1": "Bola Sombra",
-            "move2": "Canto Mortal",
-            "move3": "Bomba Lodo / Anulación",
-            "move4": "Protección"
-          },
-          "evs": {
-            "HP": "0",
-            "AT": "0",
-            "DEF": "0",
-            "SPA": "32",
-            "SPD": "2",
-            "SPEED": "32"
-          }
-        },
-        "2": {
-          "build_name": "Mega Defensiva",
-          "item": "Gengarita",
-          "nature": "Modesta",
-          "ability": "Cuerpo Maldito (Mega: Sombra Trampa)",
-          "moves": {
-            "move1": "Bola Sombra",
-            "move2": "Canto Mortal",
-            "move3": "Bomba Lodo / Anulación",
-            "move4": "Protección"
-          },
-          "evs": {
-            "HP": "24",
-            "AT": "0",
-            "DEF": "18",
-            "SPA": "0",
-            "SPD": "14",
-            "SPEED": "10"
           }
         }
       }
@@ -4407,6 +4407,53 @@
       }
     }
   ],
+  "skarmory": [
+    {
+      "pokemon_name": "Skarmory",
+      "builds": {
+        "1": {
+          "build_name": "Mega Atacante defensivo",
+          "item": "Skarmorita",
+          "nature": "Firme",
+          "ability": "Robustez (Mega: Acérrimo)",
+          "moves": {
+            "move1": "Cabeza de Hierro",
+            "move2": "Pájaro Osado",
+            "move3": "Tumba Rocas / Viento Afín",
+            "move4": "Protección"
+          },
+          "evs": {
+            "HP": "31",
+            "AT": "32",
+            "DEF": "0",
+            "SPA": "0",
+            "SPD": "0",
+            "SPEED": "3"
+          }
+        },
+        "2": {
+          "build_name": "Mega Defensiva",
+          "item": "Skarmorita",
+          "nature": "Agitada",
+          "ability": "Robustez (Mega: Acérrimo)",
+          "moves": {
+            "move1": "Cabeza de Hierro",
+            "move2": "Pájaro Osado",
+            "move3": "Tumba Rocas / Viento Afín",
+            "move4": "Protección"
+          },
+          "evs": {
+            "HP": "32",
+            "AT": "0",
+            "DEF": "10",
+            "SPA": "0",
+            "SPD": "0",
+            "SPEED": "24"
+          }
+        }
+      }
+    }
+  ],
   "starmie": [
     {
       "pokemon_name": "Starmie",
@@ -4469,53 +4516,6 @@
             "SPA": "0",
             "SPD": "0",
             "SPEED": "32"
-          }
-        }
-      }
-    }
-  ],
-  "skarmory": [
-    {
-      "pokemon_name": "Skarmory",
-      "builds": {
-        "1": {
-          "build_name": "Mega Atacante defensivo",
-          "item": "Skarmorita",
-          "nature": "Firme",
-          "ability": "Robustez (Mega: Acérrimo)",
-          "moves": {
-            "move1": "Cabeza de Hierro",
-            "move2": "Pájaro Osado",
-            "move3": "Tumba Rocas / Viento Afín",
-            "move4": "Protección"
-          },
-          "evs": {
-            "HP": "31",
-            "AT": "32",
-            "DEF": "0",
-            "SPA": "0",
-            "SPD": "0",
-            "SPEED": "3"
-          }
-        },
-        "2": {
-          "build_name": "Mega Defensiva",
-          "item": "Skarmorita",
-          "nature": "Agitada",
-          "ability": "Robustez (Mega: Acérrimo)",
-          "moves": {
-            "move1": "Cabeza de Hierro",
-            "move2": "Pájaro Osado",
-            "move3": "Tumba Rocas / Viento Afín",
-            "move4": "Protección"
-          },
-          "evs": {
-            "HP": "32",
-            "AT": "0",
-            "DEF": "10",
-            "SPA": "0",
-            "SPD": "0",
-            "SPEED": "24"
           }
         }
       }
@@ -4709,53 +4709,6 @@
       }
     }
   ],
-  "indeedee-male": [
-    {
-      "pokemon_name": "Indeedee (Macho)",
-      "builds": {
-        "1": {
-          "build_name": "Espacio Raro Pañuelo Elección",
-          "item": "Pañuelo Elección",
-          "nature": "Modesta",
-          "ability": "Psicogénesis",
-          "moves": {
-            "move1": "Vasta Fuerza",
-            "move2": "Truco",
-            "move3": "Brillo Mágico",
-            "move4": "Espacio Raro / Llama Embrujada"
-          },
-          "evs": {
-            "HP": "32",
-            "AT": "2",
-            "DEF": "0",
-            "SPA": "32",
-            "SPD": "0",
-            "SPEED": "0"
-          }
-        },
-        "2": {
-          "build_name": "Ofensiva Banda Aguante",
-          "item": "Banda Aguante",
-          "nature": "Miedosa",
-          "ability": "Psicogénesis",
-          "moves": {
-            "move1": "Vasta Fuerza",
-            "move2": "Truco",
-            "move3": "Brillo Mágico / Espacio Raro",
-            "move4": "Protección"
-          },
-          "evs": {
-            "HP": "2",
-            "AT": "0",
-            "DEF": "0",
-            "SPA": "32",
-            "SPD": "0",
-            "SPEED": "32"
-          }
-        }
-      }
-    }
-  ],
   "baxcalibur": [
     {
       "pokemon_name": "Baxcalibur",
@@ -4796,6 +4749,53 @@
             "AT": "0",
             "DEF": "2",
             "SPA": "0",
+            "SPD": "0",
+            "SPEED": "32"
+          }
+        }
+      }
+    }
+  ],
+  "indeedee-male": [
+    {
+      "pokemon_name": "Indeedee (Macho)",
+      "builds": {
+        "1": {
+          "build_name": "Espacio Raro Pañuelo Elección",
+          "item": "Pañuelo Elección",
+          "nature": "Modesta",
+          "ability": "Psicogénesis",
+          "moves": {
+            "move1": "Vasta Fuerza",
+            "move2": "Truco",
+            "move3": "Brillo Mágico",
+            "move4": "Espacio Raro / Llama Embrujada"
+          },
+          "evs": {
+            "HP": "32",
+            "AT": "2",
+            "DEF": "0",
+            "SPA": "32",
+            "SPD": "0",
+            "SPEED": "0"
+          }
+        },
+        "2": {
+          "build_name": "Ofensiva Banda Aguante",
+          "item": "Banda Aguante",
+          "nature": "Miedosa",
+          "ability": "Psicogénesis",
+          "moves": {
+            "move1": "Vasta Fuerza",
+            "move2": "Truco",
+            "move3": "Brillo Mágico / Espacio Raro",
+            "move4": "Protección"
+          },
+          "evs": {
+            "HP": "2",
+            "AT": "0",
+            "DEF": "0",
+            "SPA": "32",
             "SPD": "0",
             "SPEED": "32"
           }
@@ -5710,46 +5710,46 @@
       }
     }
   ],
-  "slowking-galar": [
+  "malamar": [
     {
-      "pokemon_name": "Slowking de Galar",
+      "pokemon_name": "Malamar",
       "builds": {
         "1": {
-          "build_name": "Espacio Raro Baya Zidra",
-          "item": "Baya Zidra",
-          "nature": "Plácida",
-          "ability": "Regeneración",
+          "build_name": "Mega Espacio Raro",
+          "item": "Malamarita",
+          "nature": "Firme",
+          "ability": "Ventosas (Mega: Respondón)",
           "moves": {
-            "move1": "Espacio Raro",
-            "move2": "Bomba Lodo",
-            "move3": "Fría Acogida",
-            "move4": "Psíquico"
+            "move1": "Fuerza Bruta",
+            "move2": "Desarme",
+            "move3": "Espacio Raro / Psicocorte",
+            "move4": "Protección"
           },
           "evs": {
             "HP": "32",
-            "AT": "2",
-            "DEF": "32",
+            "AT": "32",
+            "DEF": "2",
             "SPA": "0",
             "SPD": "0",
             "SPEED": "0"
           }
         },
         "2": {
-          "build_name": "Espacio Raro Baya Dillo",
-          "item": "Baya Dillo",
-          "nature": "Mansa",
-          "ability": "Regeneración",
+          "build_name": "Espacio Raro Baya Hibis",
+          "item": "Baya Hibis",
+          "nature": "Audaz",
+          "ability": "Ventosas",
           "moves": {
-            "move1": "Espacio Raro",
-            "move2": "Bomba Lodo",
-            "move3": "Fría Acogida",
-            "move4": "Psíquico"
+            "move1": "Fuerza Bruta",
+            "move2": "Desarme",
+            "move3": "Espacio Raro / Psicocorte",
+            "move4": "Protección"
           },
           "evs": {
             "HP": "32",
-            "AT": "2",
-            "DEF": "0",
-            "SPA": "32",
+            "AT": "32",
+            "DEF": "2",
+            "SPA": "0",
             "SPD": "0",
             "SPEED": "0"
           }
@@ -5804,46 +5804,46 @@
       }
     }
   ],
-  "malamar": [
+  "slowking-galar": [
     {
-      "pokemon_name": "Malamar",
+      "pokemon_name": "Slowking de Galar",
       "builds": {
         "1": {
-          "build_name": "Mega Espacio Raro",
-          "item": "Malamarita",
-          "nature": "Firme",
-          "ability": "Ventosas (Mega: Respondón)",
+          "build_name": "Espacio Raro Baya Zidra",
+          "item": "Baya Zidra",
+          "nature": "Plácida",
+          "ability": "Regeneración",
           "moves": {
-            "move1": "Fuerza Bruta",
-            "move2": "Desarme",
-            "move3": "Espacio Raro / Psicocorte",
-            "move4": "Protección"
+            "move1": "Espacio Raro",
+            "move2": "Bomba Lodo",
+            "move3": "Fría Acogida",
+            "move4": "Psíquico"
           },
           "evs": {
             "HP": "32",
-            "AT": "32",
-            "DEF": "2",
+            "AT": "2",
+            "DEF": "32",
             "SPA": "0",
             "SPD": "0",
             "SPEED": "0"
           }
         },
         "2": {
-          "build_name": "Espacio Raro Baya Hibis",
-          "item": "Baya Hibis",
-          "nature": "Audaz",
-          "ability": "Ventosas",
+          "build_name": "Espacio Raro Baya Dillo",
+          "item": "Baya Dillo",
+          "nature": "Mansa",
+          "ability": "Regeneración",
           "moves": {
-            "move1": "Fuerza Bruta",
-            "move2": "Desarme",
-            "move3": "Espacio Raro / Psicocorte",
-            "move4": "Protección"
+            "move1": "Espacio Raro",
+            "move2": "Bomba Lodo",
+            "move3": "Fría Acogida",
+            "move4": "Psíquico"
           },
           "evs": {
             "HP": "32",
-            "AT": "32",
-            "DEF": "2",
-            "SPA": "0",
+            "AT": "2",
+            "DEF": "0",
+            "SPA": "32",
             "SPD": "0",
             "SPEED": "0"
           }
@@ -6227,53 +6227,6 @@
       }
     }
   ],
-  "maushold-family-of-three": [
-    {
-      "pokemon_name": "Maushold (Familia de Tres)",
-      "builds": {
-        "1": {
-          "build_name": "Ofensiva Baya Pomaro",
-          "item": "Baya Pomaro",
-          "nature": "Alegre",
-          "ability": "Compiescolta",
-          "moves": {
-            "move1": "Señuelo",
-            "move2": "Proliferación",
-            "move3": "Superdiente",
-            "move4": "Protección"
-          },
-          "evs": {
-            "HP": "2",
-            "AT": "32",
-            "DEF": "0",
-            "SPA": "0",
-            "SPD": "0",
-            "SPEED": "32"
-          }
-        },
-        "2": {
-          "build_name": "Defensiva Lupa",
-          "item": "Lupa",
-          "nature": "Agitada",
-          "ability": "Compiescolta",
-          "moves": {
-            "move1": "Señuelo",
-            "move2": "Proliferación",
-            "move3": "Superdiente",
-            "move4": "Protección"
-          },
-          "evs": {
-            "HP": "25",
-            "AT": "0",
-            "DEF": "32",
-            "SPA": "0",
-            "SPD": "0",
-            "SPEED": "9"
-          }
-        }
-      }
-    }
-  ],
   "alakazam": [
     {
       "pokemon_name": "Alakazam",
@@ -6368,53 +6321,6 @@
       }
     }
   ],
-  "umbreon": [
-    {
-      "pokemon_name": "Umbreon",
-      "builds": {
-        "1": {
-          "build_name": "Defensiva Restos",
-          "item": "Restos",
-          "nature": "Osada",
-          "ability": "Fuerza Mental",
-          "moves": {
-            "move1": "Juego Sucio",
-            "move2": "Alarido",
-            "move3": "Bostezo / Luz Lunar",
-            "move4": "Protección"
-          },
-          "evs": {
-            "HP": "32",
-            "AT": "0",
-            "DEF": "5",
-            "SPA": "0",
-            "SPD": "0",
-            "SPEED": "29"
-          }
-        },
-        "2": {
-          "build_name": "Espacio Raro Baya Zidra",
-          "item": "Baya Zidra",
-          "nature": "Grosera",
-          "ability": "Fuerza Mental",
-          "moves": {
-            "move1": "Juego Sucio",
-            "move2": "Alarido",
-            "move3": "Bostezo / Luz Lunar",
-            "move4": "Protección"
-          },
-          "evs": {
-            "HP": "32",
-            "AT": "2",
-            "DEF": "0",
-            "SPA": "0",
-            "SPD": "32",
-            "SPEED": "0"
-          }
-        }
-      }
-    }
-  ],
   "medicham": [
     {
       "pokemon_name": "Medicham",
@@ -6457,6 +6363,53 @@
             "SPA": "0",
             "SPD": "0",
             "SPEED": "32"
+          }
+        }
+      }
+    }
+  ],
+  "umbreon": [
+    {
+      "pokemon_name": "Umbreon",
+      "builds": {
+        "1": {
+          "build_name": "Defensiva Restos",
+          "item": "Restos",
+          "nature": "Osada",
+          "ability": "Fuerza Mental",
+          "moves": {
+            "move1": "Juego Sucio",
+            "move2": "Alarido",
+            "move3": "Bostezo / Luz Lunar",
+            "move4": "Protección"
+          },
+          "evs": {
+            "HP": "32",
+            "AT": "0",
+            "DEF": "5",
+            "SPA": "0",
+            "SPD": "0",
+            "SPEED": "29"
+          }
+        },
+        "2": {
+          "build_name": "Espacio Raro Baya Zidra",
+          "item": "Baya Zidra",
+          "nature": "Grosera",
+          "ability": "Fuerza Mental",
+          "moves": {
+            "move1": "Juego Sucio",
+            "move2": "Alarido",
+            "move3": "Bostezo / Luz Lunar",
+            "move4": "Protección"
+          },
+          "evs": {
+            "HP": "32",
+            "AT": "2",
+            "DEF": "0",
+            "SPA": "0",
+            "SPD": "32",
+            "SPEED": "0"
           }
         }
       }
@@ -6677,53 +6630,6 @@
       }
     }
   ],
-  "gliscor": [
-    {
-      "pokemon_name": "Gliscor",
-      "builds": {
-        "1": {
-          "build_name": "Defensiva Baya Zidra",
-          "item": "Baya Zidra",
-          "nature": "Firme",
-          "ability": "Antídoto",
-          "moves": {
-            "move1": "Fuerza Equina",
-            "move2": "Ala Bis",
-            "move3": "Viento Afín / Terremoto",
-            "move4": "Protección"
-          },
-          "evs": {
-            "HP": "24",
-            "AT": "15",
-            "DEF": "8",
-            "SPA": "0",
-            "SPD": "7",
-            "SPEED": "12"
-          }
-        },
-        "2": {
-          "build_name": "Ofensiva Vidasfera",
-          "item": "Vidasfera",
-          "nature": "Alegre",
-          "ability": "Antídoto",
-          "moves": {
-            "move1": "Fuerza Equina",
-            "move2": "Ala Bis",
-            "move3": "Viento Afín / Terremoto",
-            "move4": "Protección"
-          },
-          "evs": {
-            "HP": "2",
-            "AT": "32",
-            "DEF": "0",
-            "SPA": "0",
-            "SPD": "0",
-            "SPEED": "32"
-          }
-        }
-      }
-    }
-  ],
   "clawitzer": [
     {
       "pokemon_name": "Clawitzer",
@@ -6766,6 +6672,53 @@
             "SPA": "32",
             "SPD": "0",
             "SPEED": "0"
+          }
+        }
+      }
+    }
+  ],
+  "gliscor": [
+    {
+      "pokemon_name": "Gliscor",
+      "builds": {
+        "1": {
+          "build_name": "Defensiva Baya Zidra",
+          "item": "Baya Zidra",
+          "nature": "Firme",
+          "ability": "Antídoto",
+          "moves": {
+            "move1": "Fuerza Equina",
+            "move2": "Ala Bis",
+            "move3": "Viento Afín / Terremoto",
+            "move4": "Protección"
+          },
+          "evs": {
+            "HP": "24",
+            "AT": "15",
+            "DEF": "8",
+            "SPA": "0",
+            "SPD": "7",
+            "SPEED": "12"
+          }
+        },
+        "2": {
+          "build_name": "Ofensiva Vidasfera",
+          "item": "Vidasfera",
+          "nature": "Alegre",
+          "ability": "Antídoto",
+          "moves": {
+            "move1": "Fuerza Equina",
+            "move2": "Ala Bis",
+            "move3": "Viento Afín / Terremoto",
+            "move4": "Protección"
+          },
+          "evs": {
+            "HP": "2",
+            "AT": "32",
+            "DEF": "0",
+            "SPA": "0",
+            "SPD": "0",
+            "SPEED": "32"
           }
         }
       }
@@ -6959,40 +6912,20 @@
       }
     }
   ],
-  "victreebel": [
+  "liepard": [
     {
-      "pokemon_name": "Victreebel",
+      "pokemon_name": "Liepard",
       "builds": {
         "1": {
-          "build_name": "Mega Estándar",
-          "item": "Victreebelita",
-          "nature": "Modesta",
-          "ability": "Clorofila (Mega: Revés)",
+          "build_name": "Apoyo Banda Aguante",
+          "item": "Banda Aguante",
+          "nature": "Alegre",
+          "ability": "Bromista",
           "moves": {
-            "move1": "Bomba Lodo",
-            "move2": "Somnífero",
-            "move3": "Absorbefuerza / Gigadrenado",
-            "move4": "Protección"
-          },
-          "evs": {
-            "HP": "12",
-            "AT": "0",
-            "DEF": "0",
-            "SPA": "32",
-            "SPD": "0",
-            "SPEED": "22"
-          }
-        },
-        "2": {
-          "build_name": "Mega Ofensiva",
-          "item": "Victreebelita",
-          "nature": "Firme",
-          "ability": "Clorofila (Mega: Revés)",
-          "moves": {
-            "move1": "Bomba Lodo",
-            "move2": "Somnífero",
-            "move3": "Absorbefuerza / Gigadrenado",
-            "move4": "Protección"
+            "move1": "Sorpresa",
+            "move2": "Otra Vez",
+            "move3": "Desarme",
+            "move4": "Mofa / Onda Trueno"
           },
           "evs": {
             "HP": "2",
@@ -7053,20 +6986,40 @@
       }
     }
   ],
-  "liepard": [
+  "victreebel": [
     {
-      "pokemon_name": "Liepard",
+      "pokemon_name": "Victreebel",
       "builds": {
         "1": {
-          "build_name": "Apoyo Banda Aguante",
-          "item": "Banda Aguante",
-          "nature": "Alegre",
-          "ability": "Bromista",
+          "build_name": "Mega Estándar",
+          "item": "Victreebelita",
+          "nature": "Modesta",
+          "ability": "Clorofila (Mega: Revés)",
           "moves": {
-            "move1": "Sorpresa",
-            "move2": "Otra Vez",
-            "move3": "Desarme",
-            "move4": "Mofa / Onda Trueno"
+            "move1": "Bomba Lodo",
+            "move2": "Somnífero",
+            "move3": "Absorbefuerza / Gigadrenado",
+            "move4": "Protección"
+          },
+          "evs": {
+            "HP": "12",
+            "AT": "0",
+            "DEF": "0",
+            "SPA": "32",
+            "SPD": "0",
+            "SPEED": "22"
+          }
+        },
+        "2": {
+          "build_name": "Mega Ofensiva",
+          "item": "Victreebelita",
+          "nature": "Firme",
+          "ability": "Clorofila (Mega: Revés)",
+          "moves": {
+            "move1": "Bomba Lodo",
+            "move2": "Somnífero",
+            "move3": "Absorbefuerza / Gigadrenado",
+            "move4": "Protección"
           },
           "evs": {
             "HP": "2",
@@ -7174,53 +7127,6 @@
       }
     }
   ],
-  "spiritomb": [
-    {
-      "pokemon_name": "Spiritomb",
-      "builds": {
-        "1": {
-          "build_name": "Espacio Raro Baya Hibis",
-          "item": "Baya Hibis",
-          "nature": "Grosera",
-          "ability": "Allanamiento",
-          "moves": {
-            "move1": "Espacio Raro",
-            "move2": "Fuego Fatuo",
-            "move3": "Alarido",
-            "move4": "Juego Sucio / Mismo Destino"
-          },
-          "evs": {
-            "HP": "32",
-            "AT": "0",
-            "DEF": "24",
-            "SPA": "0",
-            "SPD": "10",
-            "SPEED": "0"
-          }
-        },
-        "2": {
-          "build_name": "Espacio Raro Baya Zidra",
-          "item": "Baya Zidra",
-          "nature": "Plácida",
-          "ability": "Allanamiento",
-          "moves": {
-            "move1": "Espacio Raro",
-            "move2": "Fuego Fatuo",
-            "move3": "Alarido",
-            "move4": "Juego Sucio / Mismo Destino"
-          },
-          "evs": {
-            "HP": "32",
-            "AT": "0",
-            "DEF": "13",
-            "SPA": "0",
-            "SPD": "21",
-            "SPEED": "0"
-          }
-        }
-      }
-    }
-  ],
   "cofagrigus": [
     {
       "pokemon_name": "Cofagrigus",
@@ -7262,6 +7168,53 @@
             "DEF": "6",
             "SPA": "0",
             "SPD": "28",
+            "SPEED": "0"
+          }
+        }
+      }
+    }
+  ],
+  "spiritomb": [
+    {
+      "pokemon_name": "Spiritomb",
+      "builds": {
+        "1": {
+          "build_name": "Espacio Raro Baya Hibis",
+          "item": "Baya Hibis",
+          "nature": "Grosera",
+          "ability": "Allanamiento",
+          "moves": {
+            "move1": "Espacio Raro",
+            "move2": "Fuego Fatuo",
+            "move3": "Alarido",
+            "move4": "Juego Sucio / Mismo Destino"
+          },
+          "evs": {
+            "HP": "32",
+            "AT": "0",
+            "DEF": "24",
+            "SPA": "0",
+            "SPD": "10",
+            "SPEED": "0"
+          }
+        },
+        "2": {
+          "build_name": "Espacio Raro Baya Zidra",
+          "item": "Baya Zidra",
+          "nature": "Plácida",
+          "ability": "Allanamiento",
+          "moves": {
+            "move1": "Espacio Raro",
+            "move2": "Fuego Fatuo",
+            "move3": "Alarido",
+            "move4": "Juego Sucio / Mismo Destino"
+          },
+          "evs": {
+            "HP": "32",
+            "AT": "0",
+            "DEF": "13",
+            "SPA": "0",
+            "SPD": "21",
             "SPEED": "0"
           }
         }
@@ -7315,48 +7268,48 @@
       }
     }
   ],
-  "pikachu": [
+  "alcremie": [
     {
-      "pokemon_name": "Pikachu",
+      "pokemon_name": "Alcremie",
       "builds": {
         "1": {
-          "build_name": "Apoyo rápido Bola Luminosa",
-          "item": "Bola Luminosa",
-          "nature": "Alegre",
-          "ability": "Pararrayos",
+          "build_name": "Apoyo Baya Zidra",
+          "item": "Baya Zidra",
+          "nature": "Osada",
+          "ability": "Velo Dulce",
           "moves": {
-            "move1": "Sorpresa",
-            "move2": "Placaje Eléctrico",
-            "move3": "Trueno / Canto Encantador",
+            "move1": "Decoración",
+            "move2": "Brillo Mágico",
+            "move3": "Pantalla de Luz / Otra Vez",
             "move4": "Protección"
           },
           "evs": {
-            "HP": "0",
-            "AT": "7",
-            "DEF": "14",
+            "HP": "32",
+            "AT": "0",
+            "DEF": "29",
             "SPA": "0",
-            "SPD": "16",
-            "SPEED": "29"
+            "SPD": "5",
+            "SPEED": "0"
           }
         },
         "2": {
-          "build_name": "Ofensiva Banda Aguante",
-          "item": "Banda Aguante",
-          "nature": "Miedosa",
-          "ability": "Pararrayos",
+          "build_name": "Espacio Raro Refleluz",
+          "item": "Refleluz",
+          "nature": "Plácida",
+          "ability": "Velo Dulce",
           "moves": {
-            "move1": "Sorpresa",
-            "move2": "Placaje Eléctrico",
-            "move3": "Trueno / Canto Encantador",
+            "move1": "Decoración",
+            "move2": "Brillo Mágico",
+            "move3": "Pantalla de Luz / Otra Vez",
             "move4": "Protección"
           },
           "evs": {
-            "HP": "2",
-            "AT": "0",
-            "DEF": "0",
-            "SPA": "32",
+            "HP": "32",
+            "AT": "2",
+            "DEF": "32",
+            "SPA": "0",
             "SPD": "0",
-            "SPEED": "32"
+            "SPEED": "0"
           }
         }
       }
@@ -7409,48 +7362,48 @@
       }
     }
   ],
-  "alcremie": [
+  "pikachu": [
     {
-      "pokemon_name": "Alcremie",
+      "pokemon_name": "Pikachu",
       "builds": {
         "1": {
-          "build_name": "Apoyo Baya Zidra",
-          "item": "Baya Zidra",
-          "nature": "Osada",
-          "ability": "Velo Dulce",
+          "build_name": "Apoyo rápido Bola Luminosa",
+          "item": "Bola Luminosa",
+          "nature": "Alegre",
+          "ability": "Pararrayos",
           "moves": {
-            "move1": "Decoración",
-            "move2": "Brillo Mágico",
-            "move3": "Pantalla de Luz / Otra Vez",
+            "move1": "Sorpresa",
+            "move2": "Placaje Eléctrico",
+            "move3": "Trueno / Canto Encantador",
             "move4": "Protección"
           },
           "evs": {
-            "HP": "32",
-            "AT": "0",
-            "DEF": "29",
+            "HP": "0",
+            "AT": "7",
+            "DEF": "14",
             "SPA": "0",
-            "SPD": "5",
-            "SPEED": "0"
+            "SPD": "16",
+            "SPEED": "29"
           }
         },
         "2": {
-          "build_name": "Espacio Raro Refleluz",
-          "item": "Refleluz",
-          "nature": "Plácida",
-          "ability": "Velo Dulce",
+          "build_name": "Ofensiva Banda Aguante",
+          "item": "Banda Aguante",
+          "nature": "Miedosa",
+          "ability": "Pararrayos",
           "moves": {
-            "move1": "Decoración",
-            "move2": "Brillo Mágico",
-            "move3": "Pantalla de Luz / Otra Vez",
+            "move1": "Sorpresa",
+            "move2": "Placaje Eléctrico",
+            "move3": "Trueno / Canto Encantador",
             "move4": "Protección"
           },
           "evs": {
-            "HP": "32",
-            "AT": "2",
-            "DEF": "32",
-            "SPA": "0",
+            "HP": "2",
+            "AT": "0",
+            "DEF": "0",
+            "SPA": "32",
             "SPD": "0",
-            "SPEED": "0"
+            "SPEED": "32"
           }
         }
       }
@@ -7550,53 +7503,6 @@
       }
     }
   ],
-  "pidgeot": [
-    {
-      "pokemon_name": "Pidgeot",
-      "builds": {
-        "1": {
-          "build_name": "Mega Defensiva",
-          "item": "Pidgeotita",
-          "nature": "Miedosa",
-          "ability": "Vista Lince (Mega: Indefenso)",
-          "moves": {
-            "move1": "Vendaval",
-            "move2": "Onda Ígnea",
-            "move3": "Viento Afín",
-            "move4": "Protección"
-          },
-          "evs": {
-            "HP": "32",
-            "AT": "0",
-            "DEF": "0",
-            "SPA": "2",
-            "SPD": "0",
-            "SPEED": "32"
-          }
-        },
-        "2": {
-          "build_name": "Mega Ofensiva",
-          "item": "Pidgeotita",
-          "nature": "Modesta",
-          "ability": "Vista Lince (Mega: Indefenso)",
-          "moves": {
-            "move1": "Vendaval",
-            "move2": "Onda Ígnea",
-            "move3": "Viento Afín",
-            "move4": "Protección"
-          },
-          "evs": {
-            "HP": "7",
-            "AT": "0",
-            "DEF": "0",
-            "SPA": "27",
-            "SPD": "0",
-            "SPEED": "32"
-          }
-        }
-      }
-    }
-  ],
   "machamp": [
     {
       "pokemon_name": "Machamp",
@@ -7639,6 +7545,53 @@
             "SPA": "0",
             "SPD": "12",
             "SPEED": "0"
+          }
+        }
+      }
+    }
+  ],
+  "pidgeot": [
+    {
+      "pokemon_name": "Pidgeot",
+      "builds": {
+        "1": {
+          "build_name": "Mega Defensiva",
+          "item": "Pidgeotita",
+          "nature": "Miedosa",
+          "ability": "Vista Lince (Mega: Indefenso)",
+          "moves": {
+            "move1": "Vendaval",
+            "move2": "Onda Ígnea",
+            "move3": "Viento Afín",
+            "move4": "Protección"
+          },
+          "evs": {
+            "HP": "32",
+            "AT": "0",
+            "DEF": "0",
+            "SPA": "2",
+            "SPD": "0",
+            "SPEED": "32"
+          }
+        },
+        "2": {
+          "build_name": "Mega Ofensiva",
+          "item": "Pidgeotita",
+          "nature": "Modesta",
+          "ability": "Vista Lince (Mega: Indefenso)",
+          "moves": {
+            "move1": "Vendaval",
+            "move2": "Onda Ígnea",
+            "move3": "Viento Afín",
+            "move4": "Protección"
+          },
+          "evs": {
+            "HP": "7",
+            "AT": "0",
+            "DEF": "0",
+            "SPA": "27",
+            "SPD": "0",
+            "SPEED": "32"
           }
         }
       }
@@ -7785,47 +7738,47 @@
       }
     }
   ],
-  "rhyperior": [
+  "aurorus": [
     {
-      "pokemon_name": "Rhyperior",
+      "pokemon_name": "Aurorus",
       "builds": {
         "1": {
-          "build_name": "Espacio Raro Vidasfera",
-          "item": "Vidasfera",
-          "nature": "Audaz",
-          "ability": "Pararrayos",
+          "build_name": "Atacante defensivo Hielo Perpetuo",
+          "item": "Hielo Perpetuo",
+          "nature": "Modesta",
+          "ability": "Nevada",
           "moves": {
-            "move1": "Avalancha",
-            "move2": "Fuerza Equina",
-            "move3": "Puño Hielo / Terremoto",
+            "move1": "Ventisca",
+            "move2": "Liofilización",
+            "move3": "Poder Pasado / Velo Aurora",
             "move4": "Protección"
           },
           "evs": {
             "HP": "32",
-            "AT": "32",
-            "DEF": "2",
-            "SPA": "0",
-            "SPD": "0",
+            "AT": "0",
+            "DEF": "0",
+            "SPA": "32",
+            "SPD": "2",
             "SPEED": "0"
           }
         },
         "2": {
-          "build_name": "Atacante defensivo Hierba Blanca",
-          "item": "Hierba Blanca",
-          "nature": "Firme",
-          "ability": "Pararrayos",
+          "build_name": "Espacio Raro Banda Aguante",
+          "item": "Banda Aguante",
+          "nature": "Mansa",
+          "ability": "Nevada",
           "moves": {
-            "move1": "Avalancha",
-            "move2": "Fuerza Equina",
-            "move3": "Puño Hielo / Terremoto",
+            "move1": "Ventisca",
+            "move2": "Liofilización",
+            "move3": "Poder Pasado / Velo Aurora",
             "move4": "Protección"
           },
           "evs": {
             "HP": "32",
-            "AT": "32",
-            "DEF": "2",
-            "SPA": "0",
-            "SPD": "0",
+            "AT": "0",
+            "DEF": "0",
+            "SPA": "32",
+            "SPD": "2",
             "SPEED": "0"
           }
         }
@@ -7879,47 +7832,47 @@
       }
     }
   ],
-  "aurorus": [
+  "rhyperior": [
     {
-      "pokemon_name": "Aurorus",
+      "pokemon_name": "Rhyperior",
       "builds": {
         "1": {
-          "build_name": "Atacante defensivo Hielo Perpetuo",
-          "item": "Hielo Perpetuo",
-          "nature": "Modesta",
-          "ability": "Nevada",
+          "build_name": "Espacio Raro Vidasfera",
+          "item": "Vidasfera",
+          "nature": "Audaz",
+          "ability": "Pararrayos",
           "moves": {
-            "move1": "Ventisca",
-            "move2": "Liofilización",
-            "move3": "Poder Pasado / Velo Aurora",
+            "move1": "Avalancha",
+            "move2": "Fuerza Equina",
+            "move3": "Puño Hielo / Terremoto",
             "move4": "Protección"
           },
           "evs": {
             "HP": "32",
-            "AT": "0",
-            "DEF": "0",
-            "SPA": "32",
-            "SPD": "2",
+            "AT": "32",
+            "DEF": "2",
+            "SPA": "0",
+            "SPD": "0",
             "SPEED": "0"
           }
         },
         "2": {
-          "build_name": "Espacio Raro Banda Aguante",
-          "item": "Banda Aguante",
-          "nature": "Mansa",
-          "ability": "Nevada",
+          "build_name": "Atacante defensivo Hierba Blanca",
+          "item": "Hierba Blanca",
+          "nature": "Firme",
+          "ability": "Pararrayos",
           "moves": {
-            "move1": "Ventisca",
-            "move2": "Liofilización",
-            "move3": "Poder Pasado / Velo Aurora",
+            "move1": "Avalancha",
+            "move2": "Fuerza Equina",
+            "move3": "Puño Hielo / Terremoto",
             "move4": "Protección"
           },
           "evs": {
             "HP": "32",
-            "AT": "0",
-            "DEF": "0",
-            "SPA": "32",
-            "SPD": "2",
+            "AT": "32",
+            "DEF": "2",
+            "SPA": "0",
+            "SPD": "0",
             "SPEED": "0"
           }
         }
@@ -8188,6 +8141,53 @@
       }
     }
   ],
+  "falinks": [
+    {
+      "pokemon_name": "Falinks",
+      "builds": {
+        "1": {
+          "build_name": "Mega Atacante defensivo",
+          "item": "Falinksita",
+          "nature": "Firme",
+          "ability": "Armadura Batalla (Mega: Competitivo)",
+          "moves": {
+            "move1": "Bastión Final",
+            "move2": "A Bocajarro",
+            "move3": "Avalancha / Desarme",
+            "move4": "Protección"
+          },
+          "evs": {
+            "HP": "32",
+            "AT": "32",
+            "DEF": "2",
+            "SPA": "0",
+            "SPD": "0",
+            "SPEED": "0"
+          }
+        },
+        "2": {
+          "build_name": "Mega Ofensiva",
+          "item": "Falinksita",
+          "nature": "Alegre",
+          "ability": "Armadura Batalla (Mega: Competitivo)",
+          "moves": {
+            "move1": "Bastión Final",
+            "move2": "A Bocajarro",
+            "move3": "Avalancha / Desarme",
+            "move4": "Protección"
+          },
+          "evs": {
+            "HP": "2",
+            "AT": "32",
+            "DEF": "0",
+            "SPA": "0",
+            "SPD": "0",
+            "SPEED": "32"
+          }
+        }
+      }
+    }
+  ],
   "runerigus": [
     {
       "pokemon_name": "Runerigus",
@@ -8235,45 +8235,45 @@
       }
     }
   ],
-  "falinks": [
+  "sirfetchd": [
     {
-      "pokemon_name": "Falinks",
+      "pokemon_name": "Sirfetch'd",
       "builds": {
         "1": {
-          "build_name": "Mega Atacante defensivo",
-          "item": "Falinksita",
+          "build_name": "Defensiva Puerro",
+          "item": "Puerro",
           "nature": "Firme",
-          "ability": "Armadura Batalla (Mega: Competitivo)",
+          "ability": "Intrépido",
           "moves": {
-            "move1": "Bastión Final",
-            "move2": "A Bocajarro",
-            "move3": "Avalancha / Desarme",
+            "move1": "Asalto Estelar",
+            "move2": "Hoja Aguda",
+            "move3": "A Bocajarro / Tajo Umbrío",
             "move4": "Protección"
           },
           "evs": {
             "HP": "32",
-            "AT": "32",
+            "AT": "0",
             "DEF": "2",
             "SPA": "0",
             "SPD": "0",
-            "SPEED": "0"
+            "SPEED": "32"
           }
         },
         "2": {
-          "build_name": "Mega Ofensiva",
-          "item": "Falinksita",
-          "nature": "Alegre",
-          "ability": "Armadura Batalla (Mega: Competitivo)",
+          "build_name": "Espacio Raro Puerro",
+          "item": "Puerro",
+          "nature": "Audaz",
+          "ability": "Intrépido",
           "moves": {
-            "move1": "Bastión Final",
-            "move2": "A Bocajarro",
-            "move3": "Avalancha / Desarme",
+            "move1": "Asalto Estelar",
+            "move2": "Hoja Aguda",
+            "move3": "A Bocajarro / Tajo Umbrío",
             "move4": "Protección"
           },
           "evs": {
-            "HP": "2",
-            "AT": "32",
-            "DEF": "0",
+            "HP": "32",
+            "AT": "0",
+            "DEF": "2",
             "SPA": "0",
             "SPD": "0",
             "SPEED": "32"
@@ -8329,53 +8329,6 @@
       }
     }
   ],
-  "sirfetchd": [
-    {
-      "pokemon_name": "Sirfetch'd",
-      "builds": {
-        "1": {
-          "build_name": "Defensiva Puerro",
-          "item": "Puerro",
-          "nature": "Firme",
-          "ability": "Intrépido",
-          "moves": {
-            "move1": "Asalto Estelar",
-            "move2": "Hoja Aguda",
-            "move3": "A Bocajarro / Tajo Umbrío",
-            "move4": "Protección"
-          },
-          "evs": {
-            "HP": "32",
-            "AT": "0",
-            "DEF": "2",
-            "SPA": "0",
-            "SPD": "0",
-            "SPEED": "32"
-          }
-        },
-        "2": {
-          "build_name": "Espacio Raro Puerro",
-          "item": "Puerro",
-          "nature": "Audaz",
-          "ability": "Intrépido",
-          "moves": {
-            "move1": "Asalto Estelar",
-            "move2": "Hoja Aguda",
-            "move3": "A Bocajarro / Tajo Umbrío",
-            "move4": "Protección"
-          },
-          "evs": {
-            "HP": "32",
-            "AT": "0",
-            "DEF": "2",
-            "SPA": "0",
-            "SPD": "0",
-            "SPEED": "32"
-          }
-        }
-      }
-    }
-  ],
   "aromatisse": [
     {
       "pokemon_name": "Aromatisse",
@@ -8418,6 +8371,33 @@
             "SPA": "32",
             "SPD": "2",
             "SPEED": "0"
+          }
+        }
+      }
+    }
+  ],
+  "banette": [
+    {
+      "pokemon_name": "Banette",
+      "builds": {
+        "1": {
+          "build_name": "Mega Ofensiva",
+          "item": "Banettita",
+          "nature": "Firme",
+          "ability": "Insomnio (Mega: Bromista)",
+          "moves": {
+            "move1": "Poltergeist",
+            "move2": "Fuego Fatuo",
+            "move3": "Mismo Destino / Golpe Bajo",
+            "move4": "Protección"
+          },
+          "evs": {
+            "HP": "2",
+            "AT": "32",
+            "DEF": "0",
+            "SPA": "0",
+            "SPD": "0",
+            "SPEED": "32"
           }
         }
       }
@@ -8470,75 +8450,48 @@
       }
     }
   ],
-  "banette": [
+  "goodra": [
     {
-      "pokemon_name": "Banette",
+      "pokemon_name": "Goodra",
       "builds": {
         "1": {
-          "build_name": "Mega Ofensiva",
-          "item": "Banettita",
-          "nature": "Firme",
-          "ability": "Insomnio (Mega: Bromista)",
+          "build_name": "Atacante defensivo Baya Zidra",
+          "item": "Baya Zidra",
+          "nature": "Modesta",
+          "ability": "Herbívoro",
           "moves": {
-            "move1": "Poltergeist",
-            "move2": "Fuego Fatuo",
-            "move3": "Mismo Destino / Golpe Bajo",
+            "move1": "Cometa Draco",
+            "move2": "Bomba Lodo",
+            "move3": "Gota Vital / Pulso Dragón",
             "move4": "Protección"
           },
           "evs": {
-            "HP": "2",
-            "AT": "32",
-            "DEF": "0",
-            "SPA": "0",
-            "SPD": "0",
-            "SPEED": "32"
-          }
-        }
-      }
-    }
-  ],
-  "typhlosion": [
-    {
-      "pokemon_name": "Typhlosion",
-      "builds": {
-        "1": {
-          "build_name": "Ofensiva Pañuelo Elección",
-          "item": "Pañuelo Elección",
-          "nature": "Modesta",
-          "ability": "Absorbe Fuego",
-          "moves": {
-            "move1": "Estallido",
-            "move2": "Onda Ígnea",
-            "move3": "Bola Sombra",
-            "move4": "Arenas Ardientes / Sofoco"
-          },
-          "evs": {
-            "HP": "2",
-            "AT": "0",
+            "HP": "32",
+            "AT": "2",
             "DEF": "0",
             "SPA": "32",
             "SPD": "0",
-            "SPEED": "32"
+            "SPEED": "0"
           }
         },
         "2": {
-          "build_name": "Ofensiva Carbón",
-          "item": "Carbón",
-          "nature": "Miedosa",
-          "ability": "Absorbe Fuego",
+          "build_name": "Espacio Raro Restos",
+          "item": "Restos",
+          "nature": "Mansa",
+          "ability": "Herbívoro",
           "moves": {
-            "move1": "Estallido",
-            "move2": "Onda Ígnea",
-            "move3": "Bola Sombra / Arenas Ardientes",
+            "move1": "Cometa Draco",
+            "move2": "Bomba Lodo",
+            "move3": "Gota Vital / Pulso Dragón",
             "move4": "Protección"
           },
           "evs": {
-            "HP": "2",
+            "HP": "24",
             "AT": "0",
-            "DEF": "0",
+            "DEF": "10",
             "SPA": "32",
             "SPD": "0",
-            "SPEED": "32"
+            "SPEED": "0"
           }
         }
       }
@@ -8591,48 +8544,48 @@
       }
     }
   ],
-  "goodra": [
+  "typhlosion": [
     {
-      "pokemon_name": "Goodra",
+      "pokemon_name": "Typhlosion",
       "builds": {
         "1": {
-          "build_name": "Atacante defensivo Baya Zidra",
-          "item": "Baya Zidra",
+          "build_name": "Ofensiva Pañuelo Elección",
+          "item": "Pañuelo Elección",
           "nature": "Modesta",
-          "ability": "Herbívoro",
+          "ability": "Absorbe Fuego",
           "moves": {
-            "move1": "Cometa Draco",
-            "move2": "Bomba Lodo",
-            "move3": "Gota Vital / Pulso Dragón",
-            "move4": "Protección"
+            "move1": "Estallido",
+            "move2": "Onda Ígnea",
+            "move3": "Bola Sombra",
+            "move4": "Arenas Ardientes / Sofoco"
           },
           "evs": {
-            "HP": "32",
-            "AT": "2",
+            "HP": "2",
+            "AT": "0",
             "DEF": "0",
             "SPA": "32",
             "SPD": "0",
-            "SPEED": "0"
+            "SPEED": "32"
           }
         },
         "2": {
-          "build_name": "Espacio Raro Restos",
-          "item": "Restos",
-          "nature": "Mansa",
-          "ability": "Herbívoro",
+          "build_name": "Ofensiva Carbón",
+          "item": "Carbón",
+          "nature": "Miedosa",
+          "ability": "Absorbe Fuego",
           "moves": {
-            "move1": "Cometa Draco",
-            "move2": "Bomba Lodo",
-            "move3": "Gota Vital / Pulso Dragón",
+            "move1": "Estallido",
+            "move2": "Onda Ígnea",
+            "move3": "Bola Sombra / Arenas Ardientes",
             "move4": "Protección"
           },
           "evs": {
-            "HP": "24",
+            "HP": "2",
             "AT": "0",
-            "DEF": "10",
+            "DEF": "0",
             "SPA": "32",
             "SPD": "0",
-            "SPEED": "0"
+            "SPEED": "32"
           }
         }
       }
@@ -8687,33 +8640,6 @@
             "SPA": "0",
             "SPD": "0",
             "SPEED": "0"
-          }
-        }
-      }
-    }
-  ],
-  "raichu-alola": [
-    {
-      "pokemon_name": "Raichu de Alola",
-      "builds": {
-        "1": {
-          "build_name": "Ofensiva Banda Aguante",
-          "item": "Banda Aguante",
-          "nature": "Miedosa",
-          "ability": "Pararrayos",
-          "moves": {
-            "move1": "Psíquico",
-            "move2": "Sorpresa",
-            "move3": "Rayo / Otra Vez",
-            "move4": "Protección"
-          },
-          "evs": {
-            "HP": "2",
-            "AT": "0",
-            "DEF": "0",
-            "SPA": "32",
-            "SPD": "0",
-            "SPEED": "32"
           }
         }
       }
@@ -8800,6 +8726,33 @@
       }
     }
   ],
+  "raichu-alola": [
+    {
+      "pokemon_name": "Raichu de Alola",
+      "builds": {
+        "1": {
+          "build_name": "Ofensiva Banda Aguante",
+          "item": "Banda Aguante",
+          "nature": "Miedosa",
+          "ability": "Pararrayos",
+          "moves": {
+            "move1": "Psíquico",
+            "move2": "Sorpresa",
+            "move3": "Rayo / Otra Vez",
+            "move4": "Protección"
+          },
+          "evs": {
+            "HP": "2",
+            "AT": "0",
+            "DEF": "0",
+            "SPA": "32",
+            "SPD": "0",
+            "SPEED": "32"
+          }
+        }
+      }
+    }
+  ],
   "rampardos": [
     {
       "pokemon_name": "Rampardos",
@@ -8821,6 +8774,33 @@
             "DEF": "2",
             "SPA": "0",
             "SPD": "0",
+            "SPEED": "0"
+          }
+        }
+      }
+    }
+  ],
+  "appletun": [
+    {
+      "pokemon_name": "Appletun",
+      "builds": {
+        "1": {
+          "build_name": "Espacio Raro Restos",
+          "item": "Restos",
+          "nature": "Grosera",
+          "ability": "Sebo",
+          "moves": {
+            "move1": "Ácido Málico",
+            "move2": "Drenadoras",
+            "move3": "Recuperación / Pulso Dragón",
+            "move4": "Protección"
+          },
+          "evs": {
+            "HP": "2",
+            "AT": "0",
+            "DEF": "32",
+            "SPA": "0",
+            "SPD": "32",
             "SPEED": "0"
           }
         }
@@ -8908,55 +8888,28 @@
       }
     }
   ],
-  "appletun": [
+  "flapple": [
     {
-      "pokemon_name": "Appletun",
+      "pokemon_name": "Flapple",
       "builds": {
         "1": {
-          "build_name": "Espacio Raro Restos",
-          "item": "Restos",
-          "nature": "Grosera",
-          "ability": "Sebo",
+          "build_name": "Ofensiva Pañuelo Elección",
+          "item": "Pañuelo Elección",
+          "nature": "Alegre",
+          "ability": "Entusiasmo",
           "moves": {
-            "move1": "Ácido Málico",
-            "move2": "Drenadoras",
-            "move3": "Recuperación / Pulso Dragón",
-            "move4": "Protección"
+            "move1": "Fuerza G",
+            "move2": "Carga Dragón",
+            "move3": "Golpe Bajo",
+            "move4": "Ida y Vuelta / Ala Bis"
           },
           "evs": {
             "HP": "2",
-            "AT": "0",
-            "DEF": "32",
-            "SPA": "0",
-            "SPD": "32",
-            "SPEED": "0"
-          }
-        }
-      }
-    }
-  ],
-  "slowbro-galar": [
-    {
-      "pokemon_name": "Slowbro de Galar",
-      "builds": {
-        "1": {
-          "build_name": "Espacio Raro Garra Rápida",
-          "item": "Garra Rápida",
-          "nature": "Mansa",
-          "ability": "Regeneración",
-          "moves": {
-            "move1": "Moluscañón",
-            "move2": "Psíquico",
-            "move3": "Espacio Raro / Rayo Hielo",
-            "move4": "Protección"
-          },
-          "evs": {
-            "HP": "32",
-            "AT": "2",
+            "AT": "32",
             "DEF": "0",
-            "SPA": "32",
+            "SPA": "0",
             "SPD": "0",
-            "SPEED": "0"
+            "SPEED": "32"
           }
         }
       }
@@ -8989,28 +8942,28 @@
       }
     }
   ],
-  "flapple": [
+  "slowbro-galar": [
     {
-      "pokemon_name": "Flapple",
+      "pokemon_name": "Slowbro de Galar",
       "builds": {
         "1": {
-          "build_name": "Ofensiva Pañuelo Elección",
-          "item": "Pañuelo Elección",
-          "nature": "Alegre",
-          "ability": "Entusiasmo",
+          "build_name": "Espacio Raro Garra Rápida",
+          "item": "Garra Rápida",
+          "nature": "Mansa",
+          "ability": "Regeneración",
           "moves": {
-            "move1": "Fuerza G",
-            "move2": "Carga Dragón",
-            "move3": "Golpe Bajo",
-            "move4": "Ida y Vuelta / Ala Bis"
+            "move1": "Moluscañón",
+            "move2": "Psíquico",
+            "move3": "Espacio Raro / Rayo Hielo",
+            "move4": "Protección"
           },
           "evs": {
-            "HP": "2",
-            "AT": "32",
+            "HP": "32",
+            "AT": "2",
             "DEF": "0",
-            "SPA": "0",
+            "SPA": "32",
             "SPD": "0",
-            "SPEED": "32"
+            "SPEED": "0"
           }
         }
       }
@@ -9097,19 +9050,19 @@
       }
     }
   ],
-  "leafeon": [
+  "decidueye": [
     {
-      "pokemon_name": "Leafeon",
+      "pokemon_name": "Decidueye",
       "builds": {
         "1": {
-          "build_name": "Ofensiva Semilla Milagro",
-          "item": "Semilla Milagro",
+          "build_name": "Ofensiva Banda Aguante",
+          "item": "Banda Aguante",
           "nature": "Firme",
-          "ability": "Clorofila",
+          "ability": "Remoto",
           "moves": {
-            "move1": "Cuchilla Solar",
-            "move2": "Desarme",
-            "move3": "Hoja Aguda",
+            "move1": "Puntada Sombría",
+            "move2": "Hoja Aguda",
+            "move3": "Sombra Vil / Viento Afín",
             "move4": "Protección"
           },
           "evs": {
@@ -9124,19 +9077,19 @@
       }
     }
   ],
-  "decidueye": [
+  "leafeon": [
     {
-      "pokemon_name": "Decidueye",
+      "pokemon_name": "Leafeon",
       "builds": {
         "1": {
-          "build_name": "Ofensiva Banda Aguante",
-          "item": "Banda Aguante",
+          "build_name": "Ofensiva Semilla Milagro",
+          "item": "Semilla Milagro",
           "nature": "Firme",
-          "ability": "Remoto",
+          "ability": "Clorofila",
           "moves": {
-            "move1": "Puntada Sombría",
-            "move2": "Hoja Aguda",
-            "move3": "Sombra Vil / Viento Afín",
+            "move1": "Cuchilla Solar",
+            "move2": "Desarme",
+            "move3": "Hoja Aguda",
             "move4": "Protección"
           },
           "evs": {
@@ -9259,6 +9212,33 @@
       }
     }
   ],
+  "pincurchin": [
+    {
+      "pokemon_name": "Pincurchin",
+      "builds": {
+        "1": {
+          "build_name": "Espacio Raro Cubresuelos",
+          "item": "Cubresuelos",
+          "nature": "Mansa",
+          "ability": "Electrogénesis",
+          "moves": {
+            "move1": "Alto Voltaje",
+            "move2": "Recuperación",
+            "move3": "Electropunzada / Escaldar",
+            "move4": "Protección"
+          },
+          "evs": {
+            "HP": "32",
+            "AT": "2",
+            "DEF": "0",
+            "SPA": "32",
+            "SPD": "0",
+            "SPEED": "0"
+          }
+        }
+      }
+    }
+  ],
   "simipour": [
     {
       "pokemon_name": "Simipour",
@@ -9286,27 +9266,27 @@
       }
     }
   ],
-  "pincurchin": [
+  "bastiodon": [
     {
-      "pokemon_name": "Pincurchin",
+      "pokemon_name": "Bastiodon",
       "builds": {
         "1": {
-          "build_name": "Espacio Raro Cubresuelos",
-          "item": "Cubresuelos",
-          "nature": "Mansa",
-          "ability": "Electrogénesis",
+          "build_name": "Espacio Raro Restos",
+          "item": "Restos",
+          "nature": "Plácida",
+          "ability": "Robustez",
           "moves": {
-            "move1": "Alto Voltaje",
-            "move2": "Recuperación",
-            "move3": "Electropunzada / Escaldar",
+            "move1": "Plancha Corporal",
+            "move2": "Vasta Guardia",
+            "move3": "Juego Sucio / Defensa Férrea",
             "move4": "Protección"
           },
           "evs": {
-            "HP": "32",
-            "AT": "2",
-            "DEF": "0",
-            "SPA": "32",
-            "SPD": "0",
+            "HP": "16",
+            "AT": "0",
+            "DEF": "18",
+            "SPA": "0",
+            "SPD": "32",
             "SPEED": "0"
           }
         }
@@ -9340,33 +9320,6 @@
       }
     }
   ],
-  "bastiodon": [
-    {
-      "pokemon_name": "Bastiodon",
-      "builds": {
-        "1": {
-          "build_name": "Espacio Raro Restos",
-          "item": "Restos",
-          "nature": "Plácida",
-          "ability": "Robustez",
-          "moves": {
-            "move1": "Plancha Corporal",
-            "move2": "Vasta Guardia",
-            "move3": "Juego Sucio / Defensa Férrea",
-            "move4": "Protección"
-          },
-          "evs": {
-            "HP": "16",
-            "AT": "0",
-            "DEF": "18",
-            "SPA": "0",
-            "SPD": "32",
-            "SPEED": "0"
-          }
-        }
-      }
-    }
-  ],
   "espeon": [
     {
       "pokemon_name": "Espeon",
@@ -9380,33 +9333,6 @@
             "move1": "Brillo Mágico",
             "move2": "Psíquico",
             "move3": "Vasta Fuerza / Campo Psíquico",
-            "move4": "Protección"
-          },
-          "evs": {
-            "HP": "2",
-            "AT": "0",
-            "DEF": "0",
-            "SPA": "32",
-            "SPD": "0",
-            "SPEED": "32"
-          }
-        }
-      }
-    }
-  ],
-  "roserade": [
-    {
-      "pokemon_name": "Roserade",
-      "builds": {
-        "1": {
-          "build_name": "Ofensiva Banda Aguante",
-          "item": "Banda Aguante",
-          "nature": "Miedosa",
-          "ability": "Punto Tóxico",
-          "moves": {
-            "move1": "Bomba Lodo",
-            "move2": "Gigadrenado",
-            "move3": "Lluevehojas / Somnífero",
             "move4": "Protección"
           },
           "evs": {
@@ -9443,6 +9369,33 @@
             "SPA": "32",
             "SPD": "0",
             "SPEED": "0"
+          }
+        }
+      }
+    }
+  ],
+  "roserade": [
+    {
+      "pokemon_name": "Roserade",
+      "builds": {
+        "1": {
+          "build_name": "Ofensiva Banda Aguante",
+          "item": "Banda Aguante",
+          "nature": "Miedosa",
+          "ability": "Punto Tóxico",
+          "moves": {
+            "move1": "Bomba Lodo",
+            "move2": "Gigadrenado",
+            "move3": "Lluevehojas / Somnífero",
+            "move4": "Protección"
+          },
+          "evs": {
+            "HP": "2",
+            "AT": "0",
+            "DEF": "0",
+            "SPA": "32",
+            "SPD": "0",
+            "SPEED": "32"
           }
         }
       }
@@ -9529,33 +9482,6 @@
       }
     }
   ],
-  "wigglytuff": [
-    {
-      "pokemon_name": "Wigglytuff",
-      "builds": {
-        "1": {
-          "build_name": "Estándar Vidasfera",
-          "item": "Vidasfera",
-          "nature": "Modesta",
-          "ability": "Tenacidad",
-          "moves": {
-            "move1": "Fuerza Lunar",
-            "move2": "Brillo Mágico",
-            "move3": "Lanzallamas / Allanador Férreo",
-            "move4": "Protección"
-          },
-          "evs": {
-            "HP": "19",
-            "AT": "0",
-            "DEF": "11",
-            "SPA": "32",
-            "SPD": "4",
-            "SPEED": "0"
-          }
-        }
-      }
-    }
-  ],
   "mr-mime": [
     {
       "pokemon_name": "Mr. Mime",
@@ -9583,6 +9509,60 @@
       }
     }
   ],
+  "wigglytuff": [
+    {
+      "pokemon_name": "Wigglytuff",
+      "builds": {
+        "1": {
+          "build_name": "Estándar Vidasfera",
+          "item": "Vidasfera",
+          "nature": "Modesta",
+          "ability": "Tenacidad",
+          "moves": {
+            "move1": "Fuerza Lunar",
+            "move2": "Brillo Mágico",
+            "move3": "Lanzallamas / Allanador Férreo",
+            "move4": "Protección"
+          },
+          "evs": {
+            "HP": "19",
+            "AT": "0",
+            "DEF": "11",
+            "SPA": "32",
+            "SPD": "4",
+            "SPEED": "0"
+          }
+        }
+      }
+    }
+  ],
+  "arboliva": [
+    {
+      "pokemon_name": "Arboliva",
+      "builds": {
+        "1": {
+          "build_name": "Atacante defensivo Vidasfera",
+          "item": "Vidasfera",
+          "nature": "Modesta",
+          "ability": "Disemillar",
+          "moves": {
+            "move1": "Tierra Viva",
+            "move2": "Vozarrón",
+            "move3": "Gigadrenado / Energibola",
+            "move4": "Protección"
+          },
+          "evs": {
+            "HP": "32",
+            "AT": "2",
+            "DEF": "0",
+            "SPA": "32",
+            "SPD": "0",
+            "SPEED": "0"
+          }
+        }
+      }
+    }
+  ],
   "garbodor": [
     {
       "pokemon_name": "Garbodor",
@@ -9602,6 +9582,33 @@
             "HP": "2",
             "AT": "32",
             "DEF": "0",
+            "SPA": "0",
+            "SPD": "0",
+            "SPEED": "32"
+          }
+        }
+      }
+    }
+  ],
+  "grapploct": [
+    {
+      "pokemon_name": "Grapploct",
+      "builds": {
+        "1": {
+          "build_name": "Defensiva Cinturón Negro",
+          "item": "Cinturón Negro",
+          "nature": "Firme",
+          "ability": "Experto",
+          "moves": {
+            "move1": "Llave Corsé",
+            "move2": "Octopresa",
+            "move3": "Amago",
+            "move4": "Ultrapuño / Cascada"
+          },
+          "evs": {
+            "HP": "32",
+            "AT": "0",
+            "DEF": "2",
             "SPA": "0",
             "SPD": "0",
             "SPEED": "32"
@@ -9637,60 +9644,6 @@
       }
     }
   ],
-  "grapploct": [
-    {
-      "pokemon_name": "Grapploct",
-      "builds": {
-        "1": {
-          "build_name": "Defensiva Cinturón Negro",
-          "item": "Cinturón Negro",
-          "nature": "Firme",
-          "ability": "Experto",
-          "moves": {
-            "move1": "Llave Corsé",
-            "move2": "Octopresa",
-            "move3": "Amago",
-            "move4": "Ultrapuño / Cascada"
-          },
-          "evs": {
-            "HP": "32",
-            "AT": "0",
-            "DEF": "2",
-            "SPA": "0",
-            "SPD": "0",
-            "SPEED": "32"
-          }
-        }
-      }
-    }
-  ],
-  "arboliva": [
-    {
-      "pokemon_name": "Arboliva",
-      "builds": {
-        "1": {
-          "build_name": "Atacante defensivo Vidasfera",
-          "item": "Vidasfera",
-          "nature": "Modesta",
-          "ability": "Disemillar",
-          "moves": {
-            "move1": "Tierra Viva",
-            "move2": "Vozarrón",
-            "move3": "Gigadrenado / Energibola",
-            "move4": "Protección"
-          },
-          "evs": {
-            "HP": "32",
-            "AT": "2",
-            "DEF": "0",
-            "SPA": "32",
-            "SPD": "0",
-            "SPEED": "0"
-          }
-        }
-      }
-    }
-  ],
   "gourgeist-average": [
     {
       "pokemon_name": "Gourgeist",
@@ -9718,33 +9671,6 @@
       }
     }
   ],
-  "sandaconda": [
-    {
-      "pokemon_name": "Sandaconda",
-      "builds": {
-        "1": {
-          "build_name": "Defensa Férrea Polvo Brillo",
-          "item": "Polvo Brillo",
-          "nature": "Agitada",
-          "ability": "Velo Arena",
-          "moves": {
-            "move1": "Reducción",
-            "move2": "Avalancha",
-            "move3": "Defensa Férrea",
-            "move4": "Deslumbrar / Tierra Viva"
-          },
-          "evs": {
-            "HP": "32",
-            "AT": "2",
-            "DEF": "32",
-            "SPA": "0",
-            "SPD": "0",
-            "SPEED": "0"
-          }
-        }
-      }
-    }
-  ],
   "rotom": [
     {
       "pokemon_name": "Rotom",
@@ -9767,6 +9693,33 @@
             "SPA": "9",
             "SPD": "11",
             "SPEED": "24"
+          }
+        }
+      }
+    }
+  ],
+  "sandaconda": [
+    {
+      "pokemon_name": "Sandaconda",
+      "builds": {
+        "1": {
+          "build_name": "Defensa Férrea Polvo Brillo",
+          "item": "Polvo Brillo",
+          "nature": "Agitada",
+          "ability": "Velo Arena",
+          "moves": {
+            "move1": "Reducción",
+            "move2": "Avalancha",
+            "move3": "Defensa Férrea",
+            "move4": "Deslumbrar / Tierra Viva"
+          },
+          "evs": {
+            "HP": "32",
+            "AT": "2",
+            "DEF": "32",
+            "SPA": "0",
+            "SPD": "0",
+            "SPEED": "0"
           }
         }
       }
@@ -9814,33 +9767,6 @@
             "SPA": "0",
             "SPD": "32",
             "SPEED": "0"
-          }
-        }
-      }
-    }
-  ],
-  "tauros": [
-    {
-      "pokemon_name": "Tauros",
-      "builds": {
-        "1": {
-          "build_name": "Ofensiva Vidasfera",
-          "item": "Vidasfera",
-          "nature": "Alegre",
-          "ability": "Potencia Bruta",
-          "moves": {
-            "move1": "Avalancha",
-            "move2": "A Bocajarro",
-            "move3": "Furia Taurina / Fuerza Equina",
-            "move4": "Protección"
-          },
-          "evs": {
-            "HP": "1",
-            "AT": "32",
-            "DEF": "0",
-            "SPA": "0",
-            "SPD": "1",
-            "SPEED": "32"
           }
         }
       }
@@ -9900,6 +9826,33 @@
       }
     }
   ],
+  "tauros": [
+    {
+      "pokemon_name": "Tauros",
+      "builds": {
+        "1": {
+          "build_name": "Ofensiva Vidasfera",
+          "item": "Vidasfera",
+          "nature": "Alegre",
+          "ability": "Potencia Bruta",
+          "moves": {
+            "move1": "Avalancha",
+            "move2": "A Bocajarro",
+            "move3": "Furia Taurina / Fuerza Equina",
+            "move4": "Protección"
+          },
+          "evs": {
+            "HP": "1",
+            "AT": "32",
+            "DEF": "0",
+            "SPA": "0",
+            "SPD": "1",
+            "SPEED": "32"
+          }
+        }
+      }
+    }
+  ],
   "avalugg": [
     {
       "pokemon_name": "Avalugg",
@@ -9922,33 +9875,6 @@
             "SPA": "0",
             "SPD": "32",
             "SPEED": "0"
-          }
-        }
-      }
-    }
-  ],
-  "qwilfish": [
-    {
-      "pokemon_name": "Qwilfish",
-      "builds": {
-        "1": {
-          "build_name": "Estándar Pañuelo Elección",
-          "item": "Pañuelo Elección",
-          "nature": "Firme",
-          "ability": "Nado Rápido",
-          "moves": {
-            "move1": "Viraje",
-            "move2": "Hidroariete",
-            "move3": "Puya Nociva",
-            "move4": "Autodestrucción / Viento Hielo"
-          },
-          "evs": {
-            "HP": "16",
-            "AT": "32",
-            "DEF": "0",
-            "SPA": "0",
-            "SPD": "0",
-            "SPEED": "18"
           }
         }
       }
@@ -9981,6 +9907,33 @@
       }
     }
   ],
+  "qwilfish": [
+    {
+      "pokemon_name": "Qwilfish",
+      "builds": {
+        "1": {
+          "build_name": "Estándar Pañuelo Elección",
+          "item": "Pañuelo Elección",
+          "nature": "Firme",
+          "ability": "Nado Rápido",
+          "moves": {
+            "move1": "Viraje",
+            "move2": "Hidroariete",
+            "move3": "Puya Nociva",
+            "move4": "Autodestrucción / Viento Hielo"
+          },
+          "evs": {
+            "HP": "16",
+            "AT": "32",
+            "DEF": "0",
+            "SPA": "0",
+            "SPD": "0",
+            "SPEED": "18"
+          }
+        }
+      }
+    }
+  ],
   "swalot": [
     {
       "pokemon_name": "Swalot",
@@ -10008,6 +9961,33 @@
       }
     }
   ],
+  "qwilfish-hisui": [
+    {
+      "pokemon_name": "Qwilfish de Hisui",
+      "builds": {
+        "1": {
+          "build_name": "Estándar Pañuelo Elección",
+          "item": "Pañuelo Elección",
+          "nature": "Firme",
+          "ability": "Nado Rápido",
+          "moves": {
+            "move1": "Viraje",
+            "move2": "Hidroariete",
+            "move3": "Puya Nociva",
+            "move4": "Autodestrucción / Viento Hielo"
+          },
+          "evs": {
+            "HP": "16",
+            "AT": "32",
+            "DEF": "0",
+            "SPA": "0",
+            "SPD": "0",
+            "SPEED": "18"
+          }
+        }
+      }
+    }
+  ],
   "flareon": [
     {
       "pokemon_name": "Flareon",
@@ -10028,6 +10008,60 @@
             "AT": "32",
             "DEF": "2",
             "SPA": "0",
+            "SPD": "0",
+            "SPEED": "0"
+          }
+        }
+      }
+    }
+  ],
+  "passimian": [
+    {
+      "pokemon_name": "Passimian",
+      "builds": {
+        "1": {
+          "build_name": "Ofensiva Piedra Dura",
+          "item": "Piedra Dura",
+          "nature": "Alegre",
+          "ability": "Competitivo",
+          "moves": {
+            "move1": "Avalancha",
+            "move2": "A Bocajarro",
+            "move3": "Cabeza de Hierro / Puño Drenaje",
+            "move4": "Protección"
+          },
+          "evs": {
+            "HP": "2",
+            "AT": "32",
+            "DEF": "0",
+            "SPA": "0",
+            "SPD": "0",
+            "SPEED": "32"
+          }
+        }
+      }
+    }
+  ],
+  "polteageist": [
+    {
+      "pokemon_name": "Polteageist",
+      "builds": {
+        "1": {
+          "build_name": "Espacio Raro Banda Aguante",
+          "item": "Banda Aguante",
+          "nature": "Mansa",
+          "ability": "Cuerpo Maldito",
+          "moves": {
+            "move1": "Bola Sombra",
+            "move2": "Espacio Raro",
+            "move3": "Poder Reserva",
+            "move4": "Absorbefuerza / Rompecoraza"
+          },
+          "evs": {
+            "HP": "32",
+            "AT": "2",
+            "DEF": "0",
+            "SPA": "32",
             "SPD": "0",
             "SPEED": "0"
           }
@@ -10143,60 +10177,6 @@
       }
     }
   ],
-  "passimian": [
-    {
-      "pokemon_name": "Passimian",
-      "builds": {
-        "1": {
-          "build_name": "Ofensiva Piedra Dura",
-          "item": "Piedra Dura",
-          "nature": "Alegre",
-          "ability": "Competitivo",
-          "moves": {
-            "move1": "Avalancha",
-            "move2": "A Bocajarro",
-            "move3": "Cabeza de Hierro / Puño Drenaje",
-            "move4": "Protección"
-          },
-          "evs": {
-            "HP": "2",
-            "AT": "32",
-            "DEF": "0",
-            "SPA": "0",
-            "SPD": "0",
-            "SPEED": "32"
-          }
-        }
-      }
-    }
-  ],
-  "polteageist": [
-    {
-      "pokemon_name": "Polteageist",
-      "builds": {
-        "1": {
-          "build_name": "Espacio Raro Banda Aguante",
-          "item": "Banda Aguante",
-          "nature": "Mansa",
-          "ability": "Cuerpo Maldito",
-          "moves": {
-            "move1": "Bola Sombra",
-            "move2": "Espacio Raro",
-            "move3": "Poder Reserva",
-            "move4": "Absorbefuerza / Rompecoraza"
-          },
-          "evs": {
-            "HP": "32",
-            "AT": "2",
-            "DEF": "0",
-            "SPA": "32",
-            "SPD": "0",
-            "SPEED": "0"
-          }
-        }
-      }
-    }
-  ],
   "emolga": [
     {
       "pokemon_name": "Emolga",
@@ -10219,33 +10199,6 @@
             "SPA": "32",
             "SPD": "0",
             "SPEED": "32"
-          }
-        }
-      }
-    }
-  ],
-  "stunfisk": [
-    {
-      "pokemon_name": "Stunfisk",
-      "builds": {
-        "1": {
-          "build_name": "Espacio Raro Polvo Brillo",
-          "item": "Polvo Brillo",
-          "nature": "Mansa",
-          "ability": "Electricidad Estática",
-          "moves": {
-            "move1": "Rayo",
-            "move2": "Tierra Viva",
-            "move3": "Trueno / Campo Eléctrico",
-            "move4": "Protección"
-          },
-          "evs": {
-            "HP": "32",
-            "AT": "0",
-            "DEF": "2",
-            "SPA": "32",
-            "SPD": "0",
-            "SPEED": "0"
           }
         }
       }
@@ -10327,6 +10280,33 @@
             "SPA": "0",
             "SPD": "0",
             "SPEED": "32"
+          }
+        }
+      }
+    }
+  ],
+  "stunfisk": [
+    {
+      "pokemon_name": "Stunfisk",
+      "builds": {
+        "1": {
+          "build_name": "Espacio Raro Polvo Brillo",
+          "item": "Polvo Brillo",
+          "nature": "Mansa",
+          "ability": "Electricidad Estática",
+          "moves": {
+            "move1": "Rayo",
+            "move2": "Tierra Viva",
+            "move3": "Trueno / Campo Eléctrico",
+            "move4": "Protección"
+          },
+          "evs": {
+            "HP": "32",
+            "AT": "0",
+            "DEF": "2",
+            "SPA": "32",
+            "SPD": "0",
+            "SPEED": "0"
           }
         }
       }
@@ -10440,27 +10420,27 @@
       }
     }
   ],
-  "stunfisk-galar": [
+  "mabosstiff": [
     {
-      "pokemon_name": "Stunfisk de Galar",
+      "pokemon_name": "Mabosstiff",
       "builds": {
         "1": {
-          "build_name": "Defensiva Baya Zidra",
+          "build_name": "Estándar Baya Zidra",
           "item": "Baya Zidra",
-          "nature": "Agitada",
-          "ability": "Electricidad Estática",
+          "nature": "Cauta",
+          "ability": "Intimidación",
           "moves": {
-            "move1": "Cepo",
-            "move2": "Sustituto",
-            "move3": "Terremoto",
+            "move1": "Presa Maxilar",
+            "move2": "Alarido",
+            "move3": "Refuerzo",
             "move4": "Protección"
           },
           "evs": {
-            "HP": "32",
-            "AT": "0",
-            "DEF": "31",
-            "SPA": "0",
-            "SPD": "3",
+            "HP": "2",
+            "AT": "32",
+            "DEF": "0",
+            "SPA": "32",
+            "SPD": "0",
             "SPEED": "0"
           }
         }
@@ -10494,27 +10474,27 @@
       }
     }
   ],
-  "mabosstiff": [
+  "stunfisk-galar": [
     {
-      "pokemon_name": "Mabosstiff",
+      "pokemon_name": "Stunfisk de Galar",
       "builds": {
         "1": {
-          "build_name": "Estándar Baya Zidra",
+          "build_name": "Defensiva Baya Zidra",
           "item": "Baya Zidra",
-          "nature": "Cauta",
-          "ability": "Intimidación",
+          "nature": "Agitada",
+          "ability": "Electricidad Estática",
           "moves": {
-            "move1": "Presa Maxilar",
-            "move2": "Alarido",
-            "move3": "Refuerzo",
+            "move1": "Cepo",
+            "move2": "Sustituto",
+            "move3": "Terremoto",
             "move4": "Protección"
           },
           "evs": {
-            "HP": "2",
-            "AT": "32",
-            "DEF": "0",
-            "SPA": "32",
-            "SPD": "0",
+            "HP": "32",
+            "AT": "0",
+            "DEF": "31",
+            "SPA": "0",
+            "SPD": "3",
             "SPEED": "0"
           }
         }
