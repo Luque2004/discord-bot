@@ -1,4 +1,4 @@
-# Bot de Discord de builds de Pokemon Champions
+# Bot de Discord de builds de Pokémon Champions
 # Copyright (C) 2026  Max Luque
 #
 # This program is free software: you can redistribute it and/or modify
@@ -96,7 +96,7 @@ def cargar_builds(idioma):
     ########## descarga el json de builds en el idioma pedido ("es" o "en")
     response_builds = requests.get(APIS_BUILDS[idioma])
     return response_builds.json()
-#################################################################### Autocompletar para facilitar busqueda
+#################################################################### Autocompletar para facilitar búsqueda
 def buscar_sugerencias(diccionario, current):
     ########## filtra un diccionario clave -> nombre por lo escrito.
     ########## primero los que EMPIEZAN por el texto, después los que lo CONTIENEN
@@ -116,14 +116,14 @@ async def autocompletar_todos(interaction:discord.Interaction,current:str):
     return buscar_sugerencias(lista_todos_pokemon, current)
 
 ############## Slash command para builds
-@bot.tree.command(name="builds", description="Builds de un pokemon en Champions")
+@bot.tree.command(name="builds", description="Builds de un Pokémon en Champions")
 @app_commands.describe(pokemon="Empieza a escribir y elige de la lista")
 @app_commands.autocomplete(pokemon = autocompletar)
 async def builds_slash(interaction: discord.Interaction, pokemon : str):
     await interaction.response.defer()
     await enviar_builds(pokemon, interaction.followup.send)
 
-############## Slash command para info de un pokemon
+############## Slash command para info de un Pokémon
 @bot.tree.command(name="pokemon", description="Información de un Pokémon (tipos, habilidades, stats)")
 @app_commands.describe(pokemon="Empieza a escribir y elige de la lista (o escribe cualquier Pokémon)")
 @app_commands.autocomplete(pokemon = autocompletar_todos)
@@ -209,8 +209,14 @@ async def pokemon_slash(interaction: discord.Interaction, pokemon: str):
     await enviar_pokemon(nombre_pokemon, interaction.followup.send)
 
 
-def crear_embed_build(build_info, pokemon_image):
-    ########## construye el embed de una build a partir de su diccionario del json
+def crear_embed_build(build_info, pokemon_image, idioma):
+    ########## construye el embed de una build a partir de su diccionario del json, en "es" o "en"
+    ########## (los datos ya vienen traducidos del json; aquí solo cambian las etiquetas)
+    if idioma == "es":
+        etiqueta_reparto, etiqueta_naturaleza, etiqueta_habilidad, etiqueta_objeto, etiqueta_movimientos = "Reparto", "Naturaleza", "Habilidad", "Objeto", "Movimientos"
+    else:
+        etiqueta_reparto, etiqueta_naturaleza, etiqueta_habilidad, etiqueta_objeto, etiqueta_movimientos = "Spread", "Nature", "Ability", "Item", "Move set"
+
     build_name = build_info["build_name"]
     nature = build_info["nature"]
     HP = build_info["evs"]["HP"]
@@ -227,30 +233,28 @@ def crear_embed_build(build_info, pokemon_image):
     item = build_info["item"]
 
     # texto para las estadísticas
-    text_stat = f"**Nature:** {nature}\n**HP:** {HP}\n**AT:** {AT}\n**DEF:** {DEF}\n**SPA:** {SPA}\n**SPD:** {SPD}\n**SPEED:** {SPEED}\n"
+    text_stat = f"**{etiqueta_naturaleza}:** {nature}\n**HP:** {HP}\n**AT:** {AT}\n**DEF:** {DEF}\n**SPA:** {SPA}\n**SPD:** {SPD}\n**SPEED:** {SPEED}\n"
     text_move = f"{move1}\n{move2}\n{move3}\n{move4}\n"
-    text_ability_item = f"{ability}\n**Item**\n{item}" ########## los combino para el espacio
+    text_ability_item = f"{ability}\n**{etiqueta_objeto}**\n{item}" ########## los combino para el espacio
 
     # crear embed
     embed_builds = discord.Embed(title=build_name, description="")
-    embed_builds.add_field(name="**Spread**", value=text_stat, inline=True)
+    embed_builds.add_field(name=f"**{etiqueta_reparto}**", value=text_stat, inline=True)
     embed_builds.add_field(name="",value="",inline=True)
-    embed_builds.add_field(name="**Abiliity**",value= text_ability_item,inline=True)
-    embed_builds.add_field(name="**Move set**", value= text_move,inline=False)
+    embed_builds.add_field(name=f"**{etiqueta_habilidad}**", value=text_ability_item, inline=True)
+    embed_builds.add_field(name=f"**{etiqueta_movimientos}**", value=text_move, inline=False)
     embed_builds.set_thumbnail( url=pokemon_image)
     return embed_builds
 
 
 async def enviar_builds(nombre_pokemon, enviar):
     ########## manda un embed por build. "enviar" es la función con la que se manda
-    ########## (ctx.send desde .builds, interaction.followup.send desde /builds)
-    #############################################api imagenes############
-    api_vgc = f"https://pokeapi.co/api/v2/pokemon/{nombre_pokemon}"
-    response_pokemon = requests.get(api_vgc)
-    data_img = response_pokemon.json()
-    pokemon_image = data_img["sprites"]["front_default"]
+    ########## (interaction.followup.send desde /builds)
+    ########## imagen del pokemon (sale de la caché de PokeAPI)
+    data_img = pedir_pokemon(nombre_pokemon)
+    pokemon_image = data_img["sprites"]["front_default"] if data_img else None
 
-    ############################################################ api
+    ########## builds de nuestra api (GitHub Pages)
     data = cargar_builds("es")   # por defecto se muestran en español
     pokemon_builds = data.get(nombre_pokemon, [])
     if not pokemon_builds:
@@ -259,7 +263,7 @@ async def enviar_builds(nombre_pokemon, enviar):
 
     # bucle para hacer distintos embeds
     for build_number, build_info in pokemon_builds[0].get("builds", {}).items():
-        embed_builds = crear_embed_build(build_info, pokemon_image)
+        embed_builds = crear_embed_build(build_info, pokemon_image, "es")   # por defecto en español
         mensaje = await enviar(embed=embed_builds)
 
         ########## reacciones para cambiar de idioma ##########
@@ -279,8 +283,30 @@ def nombre_es(url):
     return traducciones_pokeapi[url]
 
 
+cache_pokemon = {}   # caché: clave de PokeAPI -> solo los datos del pokemon que usa el bot
+
+def pedir_pokemon(nombre):
+    ########## datos de un pokemon de PokeAPI; solo hace la petición la primera vez.
+    ########## guarda los 6 campos que usa el bot (~1 KB en vez de ~200 KB) con las mismas
+    ########## claves que PokeAPI, así crear_embed_pokemon no nota la diferencia.
+    ########## devuelve None si el pokemon no existe (y no lo guarda)
+    if nombre not in cache_pokemon:
+        respuesta = requests.get(f"https://pokeapi.co/api/v2/pokemon/{nombre}")
+        if respuesta.status_code != 200:
+            return None
+        data = respuesta.json()
+        cache_pokemon[nombre] = {
+            "name": data["name"],
+            "species": data["species"],
+            "types": data["types"],
+            "abilities": data["abilities"],
+            "stats": data["stats"],
+            "sprites": {"front_default": data["sprites"]["front_default"]},
+        }
+    return cache_pokemon[nombre]
+
 def crear_embed_pokemon(data, idioma):
-    ########## construye el embed de información de un pokemon (data = respuesta de PokeAPI) en "es" o "en"
+    ########## construye el embed de información de un pokemon (data = lo que devuelve pedir_pokemon) en "es" o "en"
     if idioma == "es":
         titulo = lista_pokemon.get(data["name"]) or nombre_es(data["species"]["url"])
         pokemon_types = "\n".join(nombre_es(t["type"]["url"]) for t in data["types"])
@@ -305,7 +331,7 @@ def crear_embed_pokemon(data, idioma):
     embed_pokemon = discord.Embed(title=titulo, description="")
     embed_pokemon.set_thumbnail(url=data["sprites"]["front_default"])
     embed_pokemon.add_field(name=f"**{etiqueta_tipo}**", value=pokemon_types, inline=True)
-    embed_pokemon.add_field(name="", value="", inline=True)   ############# field vacio para agrandar el espacio
+    embed_pokemon.add_field(name="", value="", inline=True)   ############# field vacío para agrandar el espacio
     embed_pokemon.add_field(name=f"**{etiqueta_habilidad}**", value=abilities, inline=True)
     embed_pokemon.add_field(name=f"**{etiqueta_stats}**", value=texto_stats, inline=False)
     embed_pokemon.set_footer(text=f"Total: {stats_total}")
@@ -313,14 +339,12 @@ def crear_embed_pokemon(data, idioma):
 
 
 async def enviar_pokemon(nombre_pokemon, enviar):
-    ########## manda el embed de información de un pokemon (datos de PokeAPI).
+    ########## manda el embed de información de un pokemon (datos de PokeAPI, a través de la caché).
     ########## "enviar" es la función con la que se manda (interaction.followup.send)
-    api_vgc = f"https://pokeapi.co/api/v2/pokemon/{nombre_pokemon}"
-    response_pokemon = requests.get(api_vgc)
-    if response_pokemon.status_code != 200:
+    data = pedir_pokemon(nombre_pokemon)
+    if not data:
         await enviar(f"No encuentro ningún Pokémon llamado **{nombre_pokemon}**")
         return
-    data = response_pokemon.json()
     mensaje = await enviar(embed=crear_embed_pokemon(data, "es"))   # por defecto en español
 
     ########## reacciones para cambiar de idioma ##########
@@ -350,11 +374,11 @@ async def on_raw_reaction_add(payload):
         info = mensajes_builds[payload.message_id]
         data = cargar_builds(idioma)
         build_info = data[info["pokemon"]][0]["builds"][info["build_number"]]
-        embed_nuevo = crear_embed_build(build_info, info["image"])
+        embed_nuevo = crear_embed_build(build_info, info["image"], idioma)
     else:
-        ########## embed de /pokemon: mismos datos de PokeAPI, nombres en el otro idioma
+        ########## embed de /pokemon: mismos datos (de la caché), nombres en el otro idioma
         info = mensajes_pokemon[payload.message_id]
-        data = requests.get(f"https://pokeapi.co/api/v2/pokemon/{info['pokemon']}").json()
+        data = pedir_pokemon(info["pokemon"])
         embed_nuevo = crear_embed_pokemon(data, idioma)
 
     canal = bot.get_channel(payload.channel_id)
@@ -371,5 +395,5 @@ async def on_raw_reaction_add(payload):
 ##################################################################################################
 
 
-bot.run(Token)# iniciar ##### trabajo pendiente: esconder el token para que nadie lo manipule
+bot.run(Token)   # iniciar el bot (el token se lee del archivo .env)
 
