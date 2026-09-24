@@ -17,7 +17,7 @@
 import discord
 from discord.ext import commands  
 from discord import app_commands
-
+import time
 
 ###################### import para abrir api#######
 import requests
@@ -91,11 +91,24 @@ APIS_BUILDS = {
     "es": "https://luque2004.github.io/discord-bot/bot_0/builds__vgc_api_es.json",
     "en": "https://luque2004.github.io/discord-bot/bot_0/builds__vgc_api.json",
 }
+cache_builds = {}        # caché: idioma -> (json de builds, momento en que se descargó)
+CADUCIDAD_BUILDS = 3600  # segundos que vale una descarga (1 hora)
+
 ######################### cargar builds
 def cargar_builds(idioma):
-    ########## descarga el json de builds en el idioma pedido ("es" o "en")
+    ########## descarga el json de builds en el idioma pedido ("es" o "en").
+    ########## lo guarda 1 hora: las builds cambian con cada regulación, así que no vale para siempre
+    ahora = time.time()
+    if idioma in cache_builds:
+        datos, guardado = cache_builds[idioma]
+        if ahora - guardado < CADUCIDAD_BUILDS:
+            return datos     # sigue fresco: se devuelve sin descargar
+
+    # no estaba o ha caducado: se descarga y se guarda con el momento actual
     response_builds = requests.get(APIS_BUILDS[idioma])
-    return response_builds.json()
+    datos = response_builds.json()
+    cache_builds[idioma] = (datos, ahora)
+    return datos
 #################################################################### Autocompletar para facilitar búsqueda
 def buscar_sugerencias(diccionario, current):
     ########## filtra un diccionario clave -> nombre por lo escrito.
