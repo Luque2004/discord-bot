@@ -399,12 +399,12 @@ async def on_raw_reaction_add(payload):
     await mensaje.edit(embed=embed_nuevo)
 
     # quitamos la reacción del usuario para que pueda volver a cambiar de idioma
-    # (necesita el permiso "Gestionar mensajes"; si no lo tiene, simplemente no la quita)
+    # (necesita el permiso "Gestionar mensajes"; si no lo tiene, avisa por la terminal y sigue)
     try:
         usuario = await bot.fetch_user(payload.user_id)
         await mensaje.remove_reaction(payload.emoji, usuario)
     except discord.Forbidden:
-        pass
+        print("No puedo quitar la reacción: al bot le falta el permiso 'Gestionar mensajes'")
 ##################################################################################################
 
 
