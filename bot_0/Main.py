@@ -31,7 +31,9 @@ Token = os.getenv("DISCORD_TOKEN")
 
 
 
-bot= commands.Bot(command_prefix=".", intents=discord.Intents.all()) 
+# solo usamos comandos slash y reacciones: con los intents por defecto basta (no hace falta activar
+# ninguno privilegiado en el portal) y sin prefijo "." discord.py no avisa de que falta Message Content
+bot= commands.Bot(command_prefix=commands.when_mentioned, intents=discord.Intents.default())
 lista_pokemon = {}         # Pokémon de Champions:  "garchomp" -> "Garchomp", "ninetales-alola" -> "Ninetales de Alola"
 lista_todos_pokemon = {}   # todos los de PokeAPI: "bulbasaur" -> "Bulbasaur", "ninetales-alola" -> "Ninetales Alola"
 @bot.event
@@ -49,7 +51,7 @@ async def on_ready():
 
 ########################################### info bot ###############################
 @bot.tree.command(name="ayuda",description="uso ")
-async def slash_command(interaction:discord.Interaction):
+async def ayuda_slash(interaction:discord.Interaction):
     texto_info_bot = "/builds\nSaca las builds de un Pokémon. Empieza a escribir el nombre y elige de la lista que aparece.\nReacciona con 🇺🇸 o 🇪🇸 en una build para verla en inglés o en español.\n\n/pokemon\nInformación detallada de un Pokémon (tipos, habilidades, stats). Elige de la lista o escribe cualquier Pokémon, aunque no esté en Champions.\nSi escribes una forma a mano usa guiones: urshifu-rapid, ogerpon-wellspring"
    
     embed_info = discord.Embed(title="Español", description="")
@@ -59,7 +61,7 @@ async def slash_command(interaction:discord.Interaction):
 ##########################################################################################################
 ########################################### info bot ####################################################
 @bot.tree.command(name="help",description="usage")
-async def slash_command(interaction:discord.Interaction):
+async def help_slash(interaction:discord.Interaction):
     texto_info_bot_ingles = "/builds\nShows the builds of a Pokémon. Start typing the name and pick one from the list.\nReact with 🇺🇸 or 🇪🇸 on a build to see it in English or Spanish.\n\n/pokemon\nDetailed info of a Pokémon (types, abilities, stats). Pick one from the list or type any Pokémon, even if it is not in Champions.\nIf you type a form by hand use hyphens: urshifu-rapid, ogerpon-wellspring"
     embed_info_english = discord.Embed(title="Usage Manual", description="")
     embed_info_english.add_field(name="**Info**", value=texto_info_bot_ingles, inline=True)
@@ -401,8 +403,9 @@ async def on_raw_reaction_add(payload):
     # quitamos la reacción del usuario para que pueda volver a cambiar de idioma
     # (necesita el permiso "Gestionar mensajes"; si no lo tiene, avisa por la terminal y sigue)
     try:
-        usuario = await bot.fetch_user(payload.user_id)
-        await mensaje.remove_reaction(payload.emoji, usuario)
+        # discord.Object solo lleva el id, que es lo único que necesita remove_reaction
+        # (así nos ahorramos pedirle el usuario entero a Discord)
+        await mensaje.remove_reaction(payload.emoji, discord.Object(id=payload.user_id))
     except discord.Forbidden:
         print("No puedo quitar la reacción: al bot le falta el permiso 'Gestionar mensajes'")
 ##################################################################################################

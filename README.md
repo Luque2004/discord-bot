@@ -75,9 +75,9 @@ los datos**. GitHub Pages tarda 1-2 minutos en desplegar.
 
 ## Poner el bot en marcha
 
-Requisitos: Python 3 y un bot creado en el [portal de desarrolladores de Discord](https://discord.com/developers/applications)
-con los tres *intents* privilegiados activados (**Presence**, **Server Members** y **Message Content**):
-el bot usa `discord.Intents.all()` y, si falta alguno, no arranca (`PrivilegedIntentsRequired`).
+Requisitos: Python 3 y un bot creado en el [portal de desarrolladores de Discord](https://discord.com/developers/applications).
+No hace falta activar ningún *intent* privilegiado: el bot solo usa comandos slash y reacciones, así
+que le bastan los *intents* por defecto (`discord.Intents.default()`).
 
 ### Invitarlo a un servidor
 
