@@ -105,8 +105,11 @@ permiso a un bot ya invitado, vuelve a abrir la URL: Discord actualiza su rol si
 
 ### Arrancarlo
 
+Instala las dependencias con las mismas versiones con las que está probado (están en
+`requirements.txt`):
+
 ```bash
-pip install discord.py requests python-dotenv
+pip install -r requirements.txt
 ```
 
 Crea un archivo `bot_0/.env` con el token (no se sube al repo, está en el `.gitignore`):
